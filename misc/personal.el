@@ -1,10 +1,10 @@
-;;; Package --- personal.el
+;;; personal.el --- My personal information stays here
 ;;; Commentary:
-;; My personal information stays here
+;; 
 ;;; Code:
 (defvar my-email-addresses)
-(setq my-email-addresses '("zzgraph@gmail.com"
-			   "shahab.shahsavari@outlook.com"
+(setq my-email-addresses '("shahab.shahsavari@outlook.com"
+			   "zzgraph@gmail.com"
 			   "shibi.shahsavari@gmail.com"))
 (provide 'personal)
 
