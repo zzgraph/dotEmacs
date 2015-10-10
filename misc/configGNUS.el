@@ -13,7 +13,7 @@
 ;; (setq gnus-secondary-select-methods nil)
 ;; (setq gnus-message-archive-group "nnmaildir+ZZGRAPH:archive")
 
-(when window-system
+(when 'display-graphic-p
   (setq gnus-sum-thread-tree-indent "  ")
   (setq gnus-sum-thread-tree-root "● ")
   (setq gnus-sum-thread-tree-false-root "◯ ")
