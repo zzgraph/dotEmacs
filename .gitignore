@@ -20,3 +20,5 @@ vendor/
 .python-environments/
 .sx/
 .authinfo.gpg
+image-dired/
+oauth2.plstore
