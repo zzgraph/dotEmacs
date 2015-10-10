@@ -29,7 +29,7 @@
   (goto-char gnus-article-current-point)
   (setq gnus-from-selected-index (+ gnus-from-selected-index 1)))
 
-(add-hook 'message-mode-hook '(lambda () (local-set-key (kbd "C-c f") 'gnus-loop-from))
+(add-hook 'message-mode-hook '(lambda () (local-set-key (kbd "C-c f") 'gnus-loop-from)))
 
 (provide 'messageInit)
 ;;; messageInit.el ends here
