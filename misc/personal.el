@@ -3,8 +3,8 @@
 ;; 
 ;;; Code:
 (defvar my-email-addresses)
-(setq my-email-addresses '("shahab.shahsavari@outlook.com"
-			   "zzgraph@gmail.com"
+(setq my-email-addresses '("zzgraph@gmail.com"
+			   "shahab.shahsavari@outlook.com"
 			   "shibi.shahsavari@gmail.com"))
 (provide 'personal)
 
