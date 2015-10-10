@@ -52,5 +52,8 @@
 (global-set-key (kbd "\C-x b") 'helm-mini)
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
 
+;;; Flyspell-helm
+(define-key flyspell-mode-map (kbd "C-;") 'helm-flyspell-correct)
+
 (provide 'keyBindings)
 ;;; keyBindings.el ends here
