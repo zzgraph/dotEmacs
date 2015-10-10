@@ -34,7 +34,11 @@
 (electric-pair-mode)
 (global-undo-tree-mode)
 
-(add-to-list 'load-path "~/.emacs.d/misc/")
+(defvar misc-settings-folder)
+(setq misc-settings-folder
+      (expand-file-name "misc" user-emacs-directory))
+(add-to-list 'load-path misc-settings-folder)
+(require 'personal)
 (require 'custom_faces)
 (require 'idoInit)
 (require 'functionsInit)
