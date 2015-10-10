@@ -3,6 +3,8 @@
 ;;; Code:
 
 (require 'bbdb)
+
+
 (bbdb-initialize 'message 'gnus 'mail)
 (setq bbdb-file "~/.bbdb")
 (add-hook 'gnus-startup-hook 'bbdb-insinuate-gnus)
@@ -41,7 +43,7 @@
                bbdb-use-alternate-names t               ;; use AKA
 
                bbdb-elided-display t                    ;; single-line addresses
-
+	       bbdb-use-pop-up nil
                ;; auto-create addresses from mail
                bbdb/mail-auto-create-p 'bbdb-ignore-some-messages-hook
                bbdb-ignore-some-messages-alist ;; don't ask about fake addresses
