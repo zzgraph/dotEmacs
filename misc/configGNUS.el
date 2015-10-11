@@ -2,8 +2,7 @@
 ;;; Commentary:
 ;;; Code:
 (require 'nnir)
-(setq user-mail-address "zzgraph@gmail.com"
-      user-full-name    "Shahab Shahsavari Alavidjeh")
+
 
 (setq
 	gnus-select-method '(nnmaildir "ZZGRAPH" (directory "~/Maildir/"))
@@ -11,7 +10,7 @@
 	mail-source-delete-incoming t
 )
 ;; (setq gnus-secondary-select-methods nil)
-;; (setq gnus-message-archive-group "nnmaildir+ZZGRAPH:archive")
+(setq gnus-message-archive-group "nnmaildir+Archive")
 
 (when 'display-graphic-p
   (setq gnus-sum-thread-tree-indent "  ")
@@ -32,6 +31,10 @@
        " "
        "%1{%B%}"
        "%s\n"))
+
+;; set a three pane configuration for gnus frame one vertical narrow
+;; window for groups, and a horizontally split window for summary
+;; and article views
 (setq gnus-summary-display-arrow t)
 (gnus-add-configuration
  '(article

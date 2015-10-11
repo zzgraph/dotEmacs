@@ -2,6 +2,8 @@
 ;;; Commentary:
 ;; 
 ;;; Code:
+(setq user-mail-address "zzgraph@gmail.com"
+      user-full-name    "Shahab Shahsavari Alavidjeh")
 (defvar my-email-addresses)
 (setq my-email-addresses '("zzgraph@gmail.com"
 			   "shahab.shahsavari@outlook.com"
