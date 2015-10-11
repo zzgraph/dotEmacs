@@ -2,7 +2,7 @@
 ;;; Commentary:
 ;;; Code:
 (global-linum-mode t)
-(setq linum-format (if (not window-system) "%4d " "%4d"))
+;; (setq linum-format (if (not window-system) "%4d " "%4d"))
 
 ;; Ensure linum-mode is disabled in certain major modes.
 ;; From Here https://github.com/bodil/ohai-emacs/blob/master/modules/ohai-appearance.el
