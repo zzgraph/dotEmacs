@@ -47,14 +47,20 @@
 (global-unset-key (kbd "\C-x m"))
 (global-set-key (kbd "\C-x m") 'message-mail)
 
-;;; Helm Bindings
+;; Helm Bindings
 (global-set-key (kbd "\M-x") 'helm-M-x)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (global-set-key (kbd "\C-x b") 'helm-mini)
 (global-set-key (kbd "\M-y") 'helm-show-kill-ring)
 
-;;; Flyspell-helm
+;; Flyspell-helm
 ;; (global-set-key (kbd "\C-;") 'helm-flyspell-correct)
+
+;; ispell change dictionary
+;; keybinding for function declared in functionsInit.el
+;; source:
+;; http://unix.stackexchange.com/questions/86554/make-hunspell-work-with-emacs-and-german-language?answertab=active#tab-top
+(global-set-key (kbd "C-c d") 'switch-dictionary-fa-en)
 
 (provide 'keyBindings)
 ;;; keyBindings.el ends here
