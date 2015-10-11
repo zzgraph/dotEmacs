@@ -1,5 +1,6 @@
-;;; Pckage --- keyBindings.el
-;;; Commentary: All of my global keybindings for various Packages
+;;; keyBindings.el --- Global Key Bindings
+;;; Commentary:
+;; All of my global keybindings for various Packages
 ;;; Code:
 ;; Browse URL Key Bindings
 ;; To Browse URLs on the text fles in Firefox
@@ -50,10 +51,10 @@
 (global-set-key (kbd "\M-x") 'helm-M-x)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (global-set-key (kbd "\C-x b") 'helm-mini)
-(global-set-key (kbd "M-y") 'helm-show-kill-ring)
+(global-set-key (kbd "\M-y") 'helm-show-kill-ring)
 
 ;;; Flyspell-helm
-(define-key flyspell-mode-map (kbd "C-;") 'helm-flyspell-correct)
+;; (global-set-key (kbd "\C-;") 'helm-flyspell-correct)
 
 (provide 'keyBindings)
 ;;; keyBindings.el ends here
