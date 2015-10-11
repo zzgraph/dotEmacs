@@ -1,6 +1,10 @@
-* TODO automatically install required packages
+* changes and tests need to be done immediately
+** TODO automatically install required packages
   1) add a list variable of needed packages
   2) check automatically those packages are installed or not by =package-installed-p=
   3) use =package-install-package= to install required packages
-  4) check how it works across machines
-  5) add windows specific configuration if needed to work with my tablet
+** TODO check if it works across machines
+** TODO add windows specific configuration if needed to work with my tablet
+* Known Issues
+** TODO global linum-mode creates huge performance issues on big files
+** 
