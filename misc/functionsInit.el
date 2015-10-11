@@ -14,8 +14,8 @@
   "Switch persian and english dictionaries!"
   (interactive)
   (let* ((dict ispell-current-dictionary)
-         (new (if (string= dict "english-hunspell") "persian-hunspell"
-                   "english-hunspell")))
+         (new (if (string= dict "en_US") "fa_IR"
+                   "en_US")))
     (ispell-change-dictionary new)
     (message "Switched dictionary from %s to %s" dict new)))
 

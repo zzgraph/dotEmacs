@@ -1,7 +1,8 @@
 ;;; flyspellInit --- costumizations for flyspell-mode
 ;;; Commentary:
 ;;; Code:
-(require 'auto-dictionary)
+;; (require 'auto-dictionary)
+(require 'ispell)
 (dolist (hook '(text-mode-hook))
   (add-hook hook (lambda () (flyspell-mode 1))))
 (dolist (modes '(emacs-lisp-mode-hook
@@ -13,28 +14,28 @@
 	    (lambda ()
 	      (flyspell-prog-mode))))
 
-;; Changing local doctionaries
+;; Changing local dictionaries
 ;; http://unix.stackexchange.com/questions/86554/make-hunspell-work-with-emacs-and-german-language?answertab=active#tab-top
-(add-to-list 'ispell-local-dictionary-alist '("prsian-hunspell"
+(add-to-list 'ispell-local-dictionary-alist '("fa_IR"
                                               "[[:alpha:]]"
                                               "[^[:alpha:]]"
                                               "[']"
                                               t
-                                              ("-d" "de_DE"); Dictionary file name
+                                              ("-d" "fa_IR"); Dictionary file name
                                               nil
-                                              iso-8859-1))
+                                              utf-8))
 
-(add-to-list 'ispell-local-dictionary-alist '("english-hunspell"
+(add-to-list 'ispell-local-dictionary-alist '("en_US"
                                               "[[:alpha:]]"
                                               "[^[:alpha:]]"
                                               "[']"
                                               t
                                               ("-d" "en_US")
                                               nil
-                                              iso-8859-1))
+                                              utf-8))
 
 (setq ispell-program-name "hunspell"          ; Use hunspell to correct mistakes
-      ispell-dictionary   "english-hunspell") ; Default dictionary to use
+      ispell-dictionary   "en_US") ; Default dictionary to use
 
 (provide 'flyspellInit)
 ;;; flyspellInit.el ends here
