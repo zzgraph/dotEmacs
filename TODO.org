@@ -1,3 +1,4 @@
+#+OPTION: toc:1g
 * changes and tests need to be done immediately
 ** TODO automatically install required packages
   1) add a list variable of needed packages
