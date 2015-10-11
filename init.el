@@ -44,7 +44,7 @@
 (require 'functionsInit)
 (require 'engineInit)
 (require 'interface)
-(require 'configGNUS)
+(require 'gnusInit)
 (require 'orgmodeInit)
 (require 'projectileInit)
 (require 'autocompleteInit)

@@ -1,5 +1,14 @@
-;;; Package --- configGNUS.el
+;;; gnusInit.el --- Configurations for gnus news and mail reader
 ;;; Commentary:
+;; I only use gnus for mail reading and although I'm using gmail but I
+;; prefer not to use gnus nnimap back-end instead I'm using fetchmail
+;; and procmail to get mails from gmail IMAP server and distribute
+;; them in a Maildir folder and using gnus only to read them. this
+;; method is more efficient in term of speed and inbox is always up to
+;; date because fetchmail works as a daemon in background. some sample
+;; nnimap configurations are still here which I copied from other
+;; places and works with gmail imap.
+;;
 ;;; Code:
 (require 'nnir)
 
@@ -71,11 +80,11 @@
 
 ;; (setq message-send-mail-function 'smtpmail-send-it
 ;;       smtpmail-starttls-credentials '(("smtp.gmail.com" 587 nil nil))
-;;       smtpmail-auth-credentials '(("smtp.gmail.com" 587 "zzgraph@gmail.com" nil))
+;;       smtpmail-auth-credentials '(("smtp.gmail.com" 587 "user@gmail.com" nil))
 ;;       smtpmail-default-smtp-server "smtp.gmail.com"
 ;;       smtpmail-smtp-server "smtp.gmail.com"
 ;;       smtpmail-smtp-service 587
-;;       smtpmail-local-domain "fedora22")
+;;       smtpmail-local-domain "")
 
 ;; (setq gnus-thread-hide-subtree t)
 ;; (setq gnus-thread-ignore-subject t)
@@ -142,5 +151,5 @@
 ;;              (local-set-key "<TAB>" 'bbdb-complete-name)))
 
 
-(provide 'configGNUS)
-;;; configGNUS.el ends here
+(provide 'gnusInit)
+;;; gnusInit.el ends here
