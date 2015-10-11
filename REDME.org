@@ -1,0 +1,10 @@
+* What is in this repo
+my personal emacs configuration files and settings.
+* The structure of configuration files
+all settings are nested in a folder called misc and named based on
+context, those files are getting called by init.el, it might be
+changed in future and I migrate to use org-babel and store all the
+settings in a single org file, but for now every package specific
+setting stays on a single file conventionally named =packageInit.el=
+* TODO?
+see the [[./TODO.org][TODO File]]
