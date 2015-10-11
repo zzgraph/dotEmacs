@@ -60,6 +60,7 @@
 (require 'eshellInit)
 (require 'messageInit)
 (require 'helmInit)
+(require 'flyspellInit)
 (require 'keyBindings)
 
 
