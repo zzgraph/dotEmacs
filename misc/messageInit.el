@@ -14,7 +14,6 @@
 ;;; Code:
 (require 'message)
 (require 'sendmail)
-(require 'google-contacts-message)
 (setq message-sendmail-f-is-evil t)
 (setq message-send-mail-function 'message-send-mail-with-sendmail)
 (setq message-sendmail-extra-arguments '("--read-envelope-from"))
