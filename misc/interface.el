@@ -13,6 +13,10 @@
 (global-hl-line-mode)
 (global-visual-line-mode t)
 (winner-mode t)
+;; (require 'fill-column-indicator)
+;; (define-globalized-minor-mode
+;;  global-fci-mode fci-mode (lambda () (fci-mode 1)))
+;; (global-fci-mode t)
 ;; (custom-set-faces
 ;;  '(default ((t (:background "black" :foreground "grey"))))
 ;;  '(fringe ((t (:background "black")))))
@@ -31,6 +35,10 @@
 	     '(alpha 95 80)
 	     )
 (load-theme 'atom-dark t)
+;; (load-theme 'leuven t)
+;; (load-theme 'birds-of-paradise-plus t)
+;; (load-theme 'deeper-blue t)
+;; (load-theme 'tango t)
 (powerline-center-theme)
 (setq powerline-default-separator 'arrow)
 (load-theme 'airline-luna t)
@@ -39,4 +47,3 @@
 
 (provide 'interface)
 ;;; interface.el ends here
-
