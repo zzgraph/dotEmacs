@@ -74,7 +74,7 @@ See (info \"(gnus)Group Line Specification\")."
   (interactive)
   (setq gnus-summary-line-format
         (concat
-         "%0{%U%R%z%}" "%10{|%}" "%1{%d%}" "%10{|%}"
+         "%0{%U%R%z%}" "%10{|%}" "%1{%D%}" "%10{|%}"
          "%9{%u&@;%}" "%(%-15,15f %)" "%10{|%}" "%4k" "%10{|%}"
          "%2u&score;" "%10{|%}" "%10{%B%}" "%s\n"))
   (setq
@@ -134,7 +134,7 @@ See (info \"(gnus)Group Line Specification\")."
 (gnus-add-configuration
  '(article
    (horizontal 1.0
-	       (vertical 25
+	       (vertical 30
 			 (group 1.0))
 	       (vertical 1.0
 			 (summary 0.25 point)
@@ -142,7 +142,7 @@ See (info \"(gnus)Group Line Specification\")."
 (gnus-add-configuration
  '(summary
    (horizontal 1.0
-	       (vertical 25
+	       (vertical 30
 			 (group 1.0))
 	       (vertical 1.0
 			 (summary 1.0 point)))))
