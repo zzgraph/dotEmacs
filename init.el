@@ -63,7 +63,7 @@
 (require 'helmInit)
 (require 'flyspellInit)
 (require 'keyBindings)
-
+(require 'slimeInit)
 
 (provide 'init)
 ;;; init.el ends Here
