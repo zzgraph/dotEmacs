@@ -49,7 +49,12 @@
                                       speedbar-mode
                                       gnus-summary-mode
                                       gnus-article-mode
-                                      calendar-mode))
+                                      calendar-mode
+				      inferior-python-mode
+				      inferior-emacs-lisp-mode
+				      python-django-mode
+				      messages-buffer-mode
+				      cider-repl-mode))
 (defadvice linum-on (around linum-on-inhibit-for-modes)
            "Stop the load of linum-mode for some major modes."
            (unless (member major-mode linum-mode-inhibit-modes-list)
