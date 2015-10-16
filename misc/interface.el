@@ -39,6 +39,7 @@
 ;; (load-theme 'birds-of-paradise-plus t)
 ;; (load-theme 'deeper-blue t)
 ;; (load-theme 'tango t)
+;; (load-theme 'majapahit-dark t)
 (powerline-center-theme)
 (setq powerline-default-separator 'arrow)
 (load-theme 'airline-luna t)
