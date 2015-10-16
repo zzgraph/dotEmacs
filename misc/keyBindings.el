@@ -62,5 +62,9 @@
 ;; http://unix.stackexchange.com/questions/86554/make-hunspell-work-with-emacs-and-german-language?answertab=active#tab-top
 (global-set-key (kbd "C-c d") 'switch-dictionary-fa-en)
 
+
+;; python-django-mode key-binding
+(global-set-key (kbd "C-x j") 'python-django-open-project)
+
 (provide 'keyBindings)
 ;;; keyBindings.el ends here
