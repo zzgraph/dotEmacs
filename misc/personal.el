@@ -8,6 +8,13 @@
 (setq my-email-addresses '("zzgraph@gmail.com"
 			   "shahab.shahsavari@outlook.com"
 			   "shibi.shahsavari@gmail.com"))
+(setenv "PATH"
+	(concat
+	 "~/bin" ":"
+	 (getenv "PATH")))
+
+(add-to-list 'exec-path "~/bin")
+
 (provide 'personal)
 
 ;;; personal.el ends here
