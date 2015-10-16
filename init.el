@@ -44,12 +44,11 @@
 (require 'functionsInit)
 (require 'engineInit)
 (require 'interface)
-(require 'gnusInit)
 (require 'orgmodeInit)
 (require 'projectileInit)
 ;; (require 'autocompleteInit)
-(require 'companyInit)
-(require 'jediInit)
+
+(require 'pythonInit)
 (require 'magitInit)
 (require 'virtualenvwrapperInit)
 (require 'yasInit)
@@ -64,6 +63,8 @@
 (require 'flyspellInit)
 (require 'keyBindings)
 (require 'slimeInit)
+(require 'gnusInit)
+(require 'companyInit)
 
 (provide 'init)
 ;;; init.el ends Here
