@@ -54,7 +54,8 @@
 				      inferior-emacs-lisp-mode
 				      python-django-mode
 				      messages-buffer-mode
-				      cider-repl-mode))
+				      cider-repl-mode
+				      Custom-mode))
 (defadvice linum-on (around linum-on-inhibit-for-modes)
            "Stop the load of linum-mode for some major modes."
            (unless (member major-mode linum-mode-inhibit-modes-list)
