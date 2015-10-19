@@ -6,6 +6,27 @@
   3) use =package-install-package= to install required packages
 ** TODO check if it works across machines
 ** TODO add windows specific configuration if needed to work with my tablet
+** TODO I always forget to quit gnus before closing Emacs frame
+
+   Here is some functions from to let it do the thing, but I don't
+   know if it works with Emacs daemon ([[http://git.hacks-galore.org/gitweb/jao?p=emacs.git;a=blob;f=custom/jao-gnus.el;h=8f83a8fa4920356098e0f2a7f5c8371db916d71b;hb=HEAD][Jao Gnus Configuration]])
+
+** TODO BBDB always starts to check file when I need it right away
+
+   find a way to start it before message mode starts. Also it still
+   need to sync with google contacts automatically instead of using
+   downloaded dump.
+
+** TODO Is There anyway to determine from header in message mode based on recipient?
+
+   in gnus I can automatically use posting-styles to use particular
+   email address when replying to an article, but what if I ran
+   message mode by hitting `C-x m' outside of gnus?
+
+   I should writ a function to ask me before sending which email I
+   want to use, or if the email address is in a known list of email,
+   use a particular address to answer.
+
 * Known Issues
 ** TODO global linum-mode creates huge performance issues on big files
-** 
+*** 
