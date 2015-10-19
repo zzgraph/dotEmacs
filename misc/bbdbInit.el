@@ -3,9 +3,9 @@
 ;;; Code:
 
 (require 'bbdb)
+(bbdb-initialize)
 
 
-(bbdb-initialize 'message 'gnus 'mail)
 (setq bbdb-file "~/.bbdb")
 (add-hook 'gnus-startup-hook 'bbdb-insinuate-gnus)
 (add-hook 'message-mode-hook
@@ -23,9 +23,9 @@
              (setq
                bbdb-offer-save 1                        ;; 1 means save-without-asking
 
-               bbdb-use-pop-up t                        ;; allow popups for addresses
+               bbdb-use-pop-up nil                        ;; allow popups for addresses
                bbdb-electric-p t                        ;; be disposable with SPC
-               bbdb-popup-target-lines  1               ;; very small
+               bbdb-popup-target-lines  nil               ;; very small
 
                bbdb-dwim-net-address-allow-redundancy t ;; always use full name
                bbdb-quiet-about-name-mismatches 2       ;; show name-mismatches 2 secs
@@ -43,7 +43,6 @@
                bbdb-use-alternate-names t               ;; use AKA
 
                bbdb-elided-display t                    ;; single-line addresses
-	       bbdb-use-pop-up nil
                ;; auto-create addresses from mail
                bbdb/mail-auto-create-p 'bbdb-ignore-some-messages-hook
                bbdb-ignore-some-messages-alist ;; don't ask about fake addresses
