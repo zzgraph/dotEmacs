@@ -7,5 +7,8 @@
 (setq org-log-done t)
 (setq org-default-notes-file (concat org-directory "/notes.org"))
 
+(require 'org-bullets)
+(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+
 (provide 'orgmodeInit)
 ;;; orgmodeInit.el ends here
