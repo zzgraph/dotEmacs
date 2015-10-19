@@ -3,7 +3,8 @@
 ;;; Code:
 (set-language-environment "UTF-8")
 (set-default-coding-systems 'utf-8)
-
+(set-locale-environment "fa")
+(set-input-method "farsi-isiri-9147")
 ;; from Prelude http://github.com/bbatsov/prelude
 ;; reduce the frequency of garbage collection by making it happen on
 ;; each 50MB of allocated data (the default is on every 0.76MB)
@@ -65,6 +66,6 @@
 (require 'slimeInit)
 (require 'gnusInit)
 (require 'companyInit)
-
+(require 'diminishInit)
 (provide 'init)
 ;;; init.el ends Here
