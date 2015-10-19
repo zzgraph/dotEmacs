@@ -12,6 +12,9 @@
 ;;; Code:
 (require 'nnir)
 
+;; I always quit Emacs without properly exiting Gnus let's take care of this
+(add-hook 'before-kill-emacs-hook 'gnus-group-exit)
+
 
 (setq gnus-select-method '(nnmaildir "ZZGRAPH" (directory "~/Maildir/"))
       mail-sources '((maildir :path "~/Maildir/" :subdirs ("cur" "new")))
@@ -70,13 +73,43 @@ See (info \"(gnus)Group Line Specification\")."
 
 (setq gnus-face-9 'font-lock-warning-face)
 (setq gnus-face-10 'shadow)
-(defun sdl-gnus-summary-line-format-ascii nil
+
+
+(defun zzgraph/gnus-summary-line-format-unicode nil
+  "Set arrow shapes in gnus summary window."
   (interactive)
-  (setq gnus-summary-line-format
+  (if (display-graphic-p)
+      (progn
+	(setq
+	 gnus-summary-line-format
+	 (concat
+         "%0{%U%R%z%}" "%10{│%}" "%4{%~(max-right 15)-15&user-date;%}" "%10{│%}"
+         "%9{%u&@;%}" "%(%-15,15f %)" "%10{│%}" "%4k %5Ll" "%10{│%}"
+         "%2u&score;" "%10{│%}" "%*" "%10{%B%}" "%~(max-right 80)s\n")
+
+	 gnus-user-date-format-alist
+	 '(
+	   ((gnus-seconds-today) . "امروز، %H:%M")
+	   ((+ 86400 (gnus-seconds-today)) . "دیروز، %H:%M")
+	   (604800 . "%A %H:%M") ;;that's one week
+	   ((gnus-seconds-month) . "%A %d")
+	   ((gnus-seconds-year) . "%B %d")
+	   (t . "%B %d '%y")) ;;this one is used when no other does match
+	 gnus-sum-thread-tree-single-indent   "◎ "
+	 gnus-sum-thread-tree-false-root      "◯ "
+	 gnus-sum-thread-tree-root            "┌ "
+	 gnus-sum-thread-tree-vertical        "│"
+	 gnus-sum-thread-tree-leaf-with-other "├─► "
+	 gnus-sum-thread-tree-single-leaf     "╰─► "
+	 gnus-sum-thread-tree-indent          "--")
+	
+	(gnus-message 5 "Using ASCII tree layout with Unicode chars."))
+
+    (setq gnus-summary-line-format
         (concat
          "%0{%U%R%z%}" "%10{|%}" "%1{%D%}" "%10{|%}"
          "%9{%u&@;%}" "%(%-15,15f %)" "%10{|%}" "%4k" "%10{|%}"
-         "%2u&score;" "%10{|%}" "%10{%B%}" "%s\n"))
+         "%2u&score;" "%10{|%}" "%10{%B%}" "%~(max-right 100)s\n"))
   (setq
    gnus-sum-thread-tree-single-indent   "o "
    gnus-sum-thread-tree-false-root      "x "
@@ -85,47 +118,12 @@ See (info \"(gnus)Group Line Specification\")."
    gnus-sum-thread-tree-leaf-with-other "|-> "
    gnus-sum-thread-tree-single-leaf     "+-> " ;; "\\" is _one_ char
    gnus-sum-thread-tree-indent          "  ")
-  (gnus-message 5 "Using ascii tree layout."))
+  (gnus-message 5 "Using ascii tree layout.")))
 
-(defun sdl-gnus-summary-line-format-unicode nil
-  (interactive)
-  (setq gnus-summary-line-format
-        (concat
-         "%0{%U%R%z%}" "%10{│%}" "%1{%d%}" "%10{│%}"
-         "%9{%u&@;%}" "%(%-15,15f %)" "%10{│%}" "%4k" "%10{│%}"
-         "%2u&score;" "%10{│%}" "%10{%B%}" "%s\n"))
-  (setq
-   gnus-sum-thread-tree-single-indent   "◎ "
-   gnus-sum-thread-tree-false-root      "◯ "
-   gnus-sum-thread-tree-root            "┌ "
-   gnus-sum-thread-tree-vertical        "│"
-   gnus-sum-thread-tree-leaf-with-other "├─>"
-   gnus-sum-thread-tree-single-leaf     "└─>"
-   gnus-sum-thread-tree-indent          "--")
-  (gnus-message 5 "Using ascii tree layout with unicode chars."))
-
-(sdl-gnus-summary-line-format-unicode)
+(add-hook 'gnus-summary-mode-hook
+	  'zzgraph/gnus-summary-line-format-unicode)
 
 
-;; (when (display-graphic-p)
-;;   (setq gnus-sum-thread-tree-indent "  ")
-;;   (setq gnus-sum-thread-tree-root "● ")
-;;   (setq gnus-sum-thread-tree-false-root "◯ ")
-;;   (setq gnus-sum-thread-tree-single-indent "◎ ")
-;;   (setq gnus-sum-thread-tree-vertical        "│")
-;;   (setq gnus-sum-thread-tree-leaf-with-other "├─► ")
-;;   (setq gnus-sum-thread-tree-single-leaf     "╰─► "))
-;; (setq gnus-summary-line-format
-;;       (concat
-;;        "%0{%U%R%z%}"
-;;        "%3{│%}" "%1{%d%}" "%3{│%}" ;; date
-;;        "  "
-;;        "%4{%-20,20f%}"               ;; name
-;;        "  "
-;;        "%3{│%}"
-;;        " "
-;;        "%1{%B%}"
-;;        "%s\n"))
 
 ;; set a three pane configuration for gnus frame one vertical narrow
 ;; window for groups, and a horizontally split window for summary
@@ -172,10 +170,10 @@ See (info \"(gnus)Group Line Specification\")."
 ;;       smtpmail-smtp-service 587
 ;;       smtpmail-local-domain "")
 
-;; (setq gnus-thread-hide-subtree t)
+(setq gnus-thread-hide-subtree t)
 ;; (setq gnus-thread-ignore-subject t)
 
-;; (add-hook 'gnus-group-mode-hook 'gnus-topic-mode)
+(add-hook 'gnus-group-mode-hook 'gnus-topic-mode)
 ;; (setq-default
 ;;   gnus-summary-line-format "%U%R%z %(%&user-date;  %-15,15f  %B%s%)\n"
 ;;   gnus-user-date-format-alist '((t . "%Y-%m-%d %H:%M"))
