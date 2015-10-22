@@ -43,7 +43,8 @@
 ;; (load-theme 'tango t)
 ;; (load-theme 'majapahit-dark t)
 ;; (load-theme 'solarized-dark t)
-(load-theme 'graham t)
+;; (load-theme 'graham t)
+(load-theme 'seti t)
 (powerline-center-theme)
 (setq powerline-default-separator 'arrow)
 
