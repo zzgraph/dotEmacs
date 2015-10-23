@@ -56,16 +56,18 @@
 (require 'linumInit)
 (require 'flycheckInit)
 (require 'googleTranslateInit)
-(require 'keyboardMacros)
+;; (require 'keyboardMacros)
 (require 'bbdbInit)
 (require 'eshellInit)
 (require 'messageInit)
 (require 'helmInit)
 (require 'flyspellInit)
-(require 'keyBindings)
 (require 'slimeInit)
 (require 'gnusInit)
 (require 'companyInit)
 (require 'diminishInit)
+(require 'keyBindings)
+
+
 (provide 'init)
 ;;; init.el ends Here
