@@ -4,10 +4,12 @@
 (setq frame-title-format '("Emacs: %b    ;;" mode-name";;"))
 (setq system-time-locale "fa_IR")
 (display-time-mode 1)
-(menu-bar-mode -1)
-(tool-bar-mode -1)
-(scroll-bar-mode -1)
-(setq-default cursor-type '(hbar . 3)
+(if (boundp (menu-bar-mode))
+    (menu-bar-mode -1))
+(if (boundp (tool-bar-mode))
+    (tool-bar-mode -1))
+(set-scroll-bar-mode nil)
+(setq-default cursor-type '(bar . 2)
 	      cursor-in-non-selected-windows 'hollow)
 (global-font-lock-mode)
 (column-number-mode)
@@ -44,15 +46,17 @@
 ;; (load-theme 'majapahit-dark t)
 ;; (load-theme 'solarized-dark t)
 ;; (load-theme 'graham t)
-(load-theme 'seti t)
+(defvar zzgraph/theme)
+(setq zzgraph/theme 'seti)
+(load-theme zzgraph/theme t)
 (powerline-center-theme)
 (setq powerline-default-separator 'arrow)
-
-
 ;; (load-theme 'airline-solarized-gui t)
 (load-theme 'airline-hybridline t)
 
-
+(add-hook 'after-make-frame-functions 'zzgraph/load-bg-only-in-graphical-mode)
 
 (provide 'interface)
 ;;; interface.el ends here
+
+

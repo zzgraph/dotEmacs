@@ -21,7 +21,13 @@
     (message "Switched dictionary from %s to %s" dict new)))
 
 
+;; Function to remove background color if the Emacs frame opens in
+;; terminal emulator, most of times to preserve transparency
 
+(defun zzgraph/load-bg-only-in-graphical-mode (&optional frame)
+  "If the FRAME created in terminal don't load background color."
+  (unless (display-graphic-p frame)
+    (set-face-background 'default "unspecified-bg" frame)))
 
 
 ;; Functions to put quotation marks and braces and parentheses around
