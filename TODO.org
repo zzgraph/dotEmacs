@@ -1,5 +1,6 @@
 #+OPTIONS: toc:1
 * changes and tests need to be done immediately
+
 ** TODO automatically install required packages
   1) add a list variable of needed packages
   2) check automatically those packages are installed or not by =package-installed-p=
@@ -27,6 +28,14 @@
    want to use, or if the email address is in a known list of email,
    use a particular address to answer.
 
+** TODO Test notmuch search backend for GNUS
+** TODO If Projectile project name=nil diminish projectile from mode-line
+
+* Known Issues
+** TODO global linum-mode creates huge performance issues on big files 
+
+* Done
+
 ** DONE +Change background color based on where I opened frame+
    CLOSED: [2015-10-23 Fri 13:01]
 
@@ -34,9 +43,3 @@
    theme, the color may override transparency settings in terminal
    emulator.
 
-** TODO Test notmuch search backend for GNUS
-
-** TODO If Projectile project name=nil diminish projectile from mode-line
-* Known Issues
-** TODO global linum-mode creates huge performance issues on big files
-*** 
