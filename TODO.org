@@ -27,6 +27,15 @@
    want to use, or if the email address is in a known list of email,
    use a particular address to answer.
 
+** TODO Change background color based on where I opened frame
+
+   When we use custom themes default background color may be set by
+   theme, the color may override transparency settings in terminal
+   emulator.
+
+** TODO Test notmuch search backend for GNUS
+
+** TODO If Projectile project name=nil diminish projectile from mode-line
 * Known Issues
 ** TODO global linum-mode creates huge performance issues on big files
 *** 
