@@ -28,7 +28,7 @@
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
 ;; magit Keybindings
-(global-set-key (kbd "\C-x g") 'magit-status)
+(global-set-key (kbd "C-x g") 'magit-status)
 
 ;; undotree-mode Keybindings
 (global-set-key (kbd "M-/") 'undo-tree-visualize)
@@ -40,23 +40,24 @@
 (global-set-key (kbd "C->") 'ace-jump-mode)
 
 ;; Google Translator
-(global-set-key (kbd "\C-ct") 'google-translate-smooth-translate)
+(global-set-key (kbd "C-c t") 'google-translate-smooth-translate)
 
 ;; Sending Mail: Change default behaviour of "C-x m" to open mail in
 ;; gnus message-mode instead of emacs mail-mode
-(global-unset-key (kbd "\C-x m"))
-(global-set-key (kbd "\C-x m") 'message-mail)
+(global-unset-key (kbd "C-x m"))
+(global-set-key (kbd "C-x m") 'message-mail)
 
 ;; Helm Bindings
-(global-set-key (kbd "\M-x") 'helm-M-x)
+(global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
-(global-set-key (kbd "\C-x b") 'helm-mini)
-(global-set-key (kbd "\M-y") 'helm-show-kill-ring)
+(global-set-key (kbd "C-x b") 'helm-mini)
+(global-set-key (kbd "M-y") 'helm-show-kill-ring)
 
 ;; Flyspell-helm
-;; (global-set-key (kbd "\C-;") 'helm-flyspell-correct)
+;; (global-set-key (kbd "C-;") 'helm-flyspell-correct)
+(define-key flyspell-mode-map (kbd "C-;") 'helm-flyspell-correct)
 
-;; ispell change dictionary
+;; ispelll change dictionary
 ;; keybinding for function declared in functionsInit.el
 ;; source:
 ;; http://unix.stackexchange.com/questions/86554/make-hunspell-work-with-emacs-and-german-language?answertab=active#tab-top
