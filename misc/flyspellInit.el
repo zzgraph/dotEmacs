@@ -2,6 +2,7 @@
 ;;; Commentary:
 ;;; Code:
 ;; (require 'auto-dictionary)
+(require 'flyspell)
 (require 'ispell)
 (dolist (hook '(text-mode-hook))
   (add-hook hook (lambda () (flyspell-mode 1))))
