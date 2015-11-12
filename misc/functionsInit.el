@@ -61,13 +61,14 @@
    (t
     (setq closing-character opening-character))
    )
-  (let start-of-surrounded-text (make-marker))
-  (let end-of-surrounded-text (make-marker))
+  (let ((start-of-surrounded-text (make-marker)))
+    ((end-of-surrounded-text (make-marker))))
+ 
   (if '(mark-active)
       (progn
 	(
-	 (let start-of-surrounded-text (make-marker))
-	 (let end-of-surrounded-text (make-marker))
+	 (setq start-of-surrounded-text (make-marker))
+	 (setq end-of-surrounded-text (make-marker))
 	 (set-marker start-of-surrounded-text (mark))
 	 (set-marker end-of-surrounded-text (point))
 	 (setq marker-position-of-start (marker-position start-of-surrounded-text))
