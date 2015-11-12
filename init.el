@@ -66,6 +66,10 @@
 (require 'gnusInit)
 (require 'companyInit)
 (require 'diminishInit)
+(require 'pareditInit)
+(require 'eldocInit)
+(require 'ciderInit)
+(require 'clojureInit)
 (require 'keyBindings)
 
 
