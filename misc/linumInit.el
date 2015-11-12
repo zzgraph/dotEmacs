@@ -1,73 +1,27 @@
 ;;; linumInit.el --- Configuration to show line numbers
 ;;; Commentary:
 ;;; Code:
-;; (global-linum-mode t)
-;; (setq linum-format (if (not window-system) "%4d " "%4d"))
 
-;; Ensure linum-mode is disabled in certain major modes.
-;; From Here https://github.com/bodil/ohai-emacs/blob/master/modules/ohai-appearance.el
-;; (setq linum-disabled-modes
-;;       '(term-mode magit-status-mode help-mode
-;; 		  package-menu-mode apropos-mode
-;; 		  special-mode gnus-article-mode gnus-summary-mode))
-
-;; (defun linum-on ()
-;;   (unless (or (minibufferp) (member major-mode linum-disabled-modes))
-;;     (linum-mode 1)))
-;; ;http://stackoverflow.com/questions/3875213/ \
-;; ;turning-on-linum-mode-when-in-python-c-mode
-;; (defvar linum-mode-inhibit-modes-list)
-;; (setq linum-mode-inhibit-modes-list '(eshell-mode
-;;                                       shell-mode
-;;                                       dictionary-mode
-;;                                       erc-mode
-;;                                       browse-kill-ring-mode
-;;                                       etags-select-mode
-;;                                       dired-mode
-;;                                       help-mode
-;;                                       text-mode
-;;                                       fundamental-mode
-;;                                       jabber-roster-mode
-;;                                       jabber-chat-mode
-;;                                       inferior-scheme-mode
-;;                                       twittering-mode
-;;                                       compilation-mode
-;;                                       weibo-timeline-mode
-;;                                       woman-mode
-;;                                       Info-mode
-;;                                       calc-mode
-;;                                       calc-trail-mode
-;;                                       comint-mode
-;;                                       gnus-group-mode
-;;                                       inf-ruby-mode
-;;                                       gud-mode
-;;                                       org-mode
-;;                                       vc-git-log-edit-mode
-;;                                       log-edit-mode
-;;                                       term-mode
-;;                                       w3m-mode
-;;                                       speedbar-mode
-;;                                       gnus-summary-mode
-;;                                       gnus-article-mode
-;;                                       calendar-mode
-;; 				      inferior-python-mode
-;; 				      inferior-emacs-lisp-mode
-;; 				      python-django-mode
-;; 				      messages-buffer-mode
-;; 				      cider-repl-mode
-;; 				      Custom-mode
-;; 				      gnus-browse-mode))
-;; (defadvice linum-on (around linum-on-inhibit-for-modes)
-;;            "Stop the load of linum-mode for some major modes."
-;;            (unless (member major-mode linum-mode-inhibit-modes-list)
-;;              ad-do-it))
-;; (ad-activate 'linum-on)
 
 ;; Isn't it silly to first start a global mode and then inhibit it in
 ;; almost "every other" modes? I think it's silly! let see how is this
 ;; going to work, and let's use nlinum instead of linum
 (add-hook 'prog-mode-hook 'linum-mode)
-;; (require 'hlinum)
-;; (hlinum-activate)
+
+;; Fix Line number scaling based on window font scale
+;; Source: http://www.emacswiki.org/emacs/LineNumbers#toc14
+(defun linum-update-window-scale-fix (window)
+  "Fix Line number scaling based on WINDOW font scale."
+  (set-window-margins window
+		      (ceiling (* (if (boundp 'text-scale-mode-step)
+				      (expt text-scale-mode-step
+					    text-scale-mode-amount) 1)
+				  (if (car (window-margins))
+				      (car (window-margins)) 1)
+				  ))))
+(advice-add #'linum-update-window :after #'linum-update-window-scale-fix)
+(require 'hlinum)
+(hlinum-activate)
 
 (provide 'linumInit)
+;;; linumInit.el ends here
