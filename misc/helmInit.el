@@ -1,6 +1,7 @@
-;;; Package --- helmInit.el
+;;; helmInit.el --- Configurations for helm
 ;;; Commentary:
 ;;; Code:
+
 (require 'helm-config)
 (require 'helm-descbinds)
 (helm-descbinds-mode)
