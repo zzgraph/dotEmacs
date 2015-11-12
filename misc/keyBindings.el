@@ -67,5 +67,9 @@
 ;; python-django-mode key-binding
 (global-set-key (kbd "C-x j") 'python-django-open-project)
 
+
+;; Enable ibuffer instead of Buffer-list
+(global-set-key (kbd "C-x C-b") 'ibuffer)
+
 (provide 'keyBindings)
 ;;; keyBindings.el ends here
