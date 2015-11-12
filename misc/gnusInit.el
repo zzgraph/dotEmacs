@@ -16,16 +16,25 @@
 (add-hook 'before-kill-emacs-hook 'gnus-group-exit)
 
 
-(setq gnus-select-method '(nnmaildir "ZZGRAPH" (directory "~/Maildir/"))
+(setq gnus-select-method '(nnmaildir "ZZGRAPH" (directory "~/Maildir/")
+				     (get-new-mail t)
+				     (nnir-search-engine notmuch)
+				     )
+      nnir-notmuch-remove-prefix "/home/shibi/Maildir"
       mail-sources '((maildir :path "~/Maildir/" :subdirs ("cur" "new")))
       mail-source-delete-incoming t
-)
+      )
+(defun zzgraph/update-notmuch ()
+  (start-process "notmuch-poll" nil "notmuch" "new"))
+
+(add-hook 'gnus-after-getting-new-news-hook 'zzgraph/update-notmuch)
+
 (setq gnus-secondary-select-methods '((nntp "news.gmane.org")))
 (setq gnus-message-archive-method "nnmaildir+ZZGRAPH:"
-	  gnus-update-message-archive-method t
+      gnus-update-message-archive-method t
       gnus-message-archive-group '((if (message-news-p)
-      "nnmaildir+ZZGRAPH:sent-news"
-	  "nnmaildir+ZZGRAPH:Archive")))
+				       "nnmaildir+ZZGRAPH:sent-news"
+				     "nnmaildir+ZZGRAPH:Archive")))
 
 
 (setq gnus-visible-headers "^From:\\|^Newsgroups:\\|^Subject:\\|^Date:\\|\
