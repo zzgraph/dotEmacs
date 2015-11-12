@@ -10,5 +10,7 @@
 (require 'org-bullets)
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 
+(setq org-reveal-root "file:///home/shibi/Downloads/source/reveal.js")
+
 (provide 'orgmodeInit)
 ;;; orgmodeInit.el ends here
