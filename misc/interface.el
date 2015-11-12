@@ -47,13 +47,36 @@
 ;; (load-theme 'solarized-dark t)
 ;; (load-theme 'graham t)
 (defvar zzgraph/theme)
-(setq zzgraph/theme 'seti)
+(setq zzgraph/theme 'deeper-blue)
 (load-theme zzgraph/theme t)
-(powerline-center-theme)
-(setq powerline-default-separator 'arrow)
-;; (load-theme 'airline-solarized-gui t)
-(load-theme 'airline-hybridline t)
 
+;; Let's have some mode-line customization fun
+
+(set-face-attribute 'mode-line nil
+                    :box '(:width 1)
+		    :box '(:color "white")
+		    :box '(:style nil)
+		    :height 1.1
+		    :foreground "white smoke"
+		    :background "steel blue")
+
+(set-face-attribute 'mode-line-inactive nil
+                    :box '(:width 1)
+		    :box '(:color "white")
+		    :box '(:style nil)
+		    :height 1.1
+		    :foreground "white smoke"
+		    :background "DimGray")
+
+
+;; (require 'powerline) (powerline-default-theme) (setq
+;; powerline-default-separator 'arrow) ;; (load-theme
+;; 'airline-solarized-gui t) (load-theme 'airline-hybridline t)
+
+
+
+;; Call function to change background to unspecified color if we open
+;; up emacs in a terminal emulator
 (add-hook 'after-make-frame-functions 'zzgraph/load-bg-only-in-graphical-mode)
 
 (provide 'interface)
