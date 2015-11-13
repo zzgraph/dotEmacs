@@ -13,35 +13,26 @@
 ;; warn when opening files bigger than 100MB
 (setq large-file-warning-threshold 100000000)
 ;;; (require 'tls)
-
 (require 'epa-file)
 (epa-file-enable)
-
-
 (windmove-default-keybindings)
-(require 'package)
-(add-to-list 'package-archives
-	     '("melpa" . "http://melpa.org/packages/")
-	     t)
-(add-to-list 'package-archives
-	     '("marmalade" . "http://marmalade-repo.org/packages/")
-	     t)
-(add-to-list 'package-archives
-	     '("org" . "http://orgmode.org/elpa/")
-	     t)
-(package-initialize)
-
-
 (electric-pair-mode)
-(global-undo-tree-mode)
 
 (defvar misc-settings-folder)
 (setq misc-settings-folder
       (expand-file-name "misc" user-emacs-directory))
+
+;; Set a custom custom-file for Emacs own customize system
+(setq custom-file
+      (expand-file-name "custom.el" misc-settings-folder))
+
+(load custom-file)
+
 (add-to-list 'load-path misc-settings-folder)
 (require 'personal)
+(require 'packagesInit)
 (require 'customFacesInit)
-(require 'idoInit)
+;; (require 'idoInit)
 (require 'functionsInit)
 (require 'engineInit)
 (require 'interface)
@@ -51,7 +42,7 @@
 
 (require 'pythonInit)
 (require 'magitInit)
-(require 'virtualenvwrapperInit)
+;; (require 'virtualenvwrapperInit)
 (require 'yasInit)
 (require 'linumInit)
 (require 'flycheckInit)
@@ -73,5 +64,6 @@
 (require 'keyBindings)
 
 
+(global-undo-tree-mode)
 (provide 'init)
 ;;; init.el ends Here

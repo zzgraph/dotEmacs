@@ -2,7 +2,7 @@
 ;;; Commentary:
 ;;; Code:
 
-(require 'bbdb)
+;; (require 'bbdb)
 (bbdb-initialize)
 
 
@@ -15,7 +15,7 @@
              (local-set-key "<TAB>" 'bbdb-complete-name)))
 (defvar bbdb-time-internal-format "%Y-%m-%d"
   "The internal date format.")
-(autoload 'gmail2bbdb-import-file "gmail2bbdb" nil t nil)
+;; (autoload 'gmail2bbdb-import-file "gmail2bbdb" nil t nil)
 ;; From Here https://github.com/redguardtoo/emacs.d/blob/master/lisp/init-bbdb.el
 (add-hook 'bbdb-initialize-hook
           '(lambda ()
