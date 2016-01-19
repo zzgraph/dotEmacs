@@ -50,7 +50,8 @@
         esh-help
 	virtualenvwrapper
 	emms
-	company-quickhelp))
+	company-quickhelp
+	eshell-prompt-extras))
 (unless package-archive-contents
   (package-refresh-contents))
 
