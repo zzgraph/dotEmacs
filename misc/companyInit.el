@@ -7,6 +7,8 @@
 (push 'slime-company company-backends)
 (add-hook 'rlc-no-readline-hook (lambda () (company-mode -1)))
 (company-quickhelp-mode 1)
+(eval-after-load 'company
+  '(define-key company-active-map (kbd "M-h") #'company-quickhelp-manual-begin))
 (require 'color)
 
 ;; (let ((bg (face-attribute 'default :background)))

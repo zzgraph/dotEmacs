@@ -11,7 +11,7 @@
 (when (executable-find "ipython3")
       (setq
        python-shell-interpreter "ipython3"
-       python-shell-interpreter-args ""
+       python-shell-interpreter-args "--simple-prompt"
        python-shell-prompt-regexp "In \\[[0-9]+\\]: "
        python-shell-prompt-output-regexp "Out\\[[0-9]+\\]: "
        python-shell-completion-setup-code
