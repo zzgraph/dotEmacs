@@ -51,7 +51,10 @@
 	virtualenvwrapper
 	emms
 	company-quickhelp
-	eshell-prompt-extras))
+	eshell-prompt-extras
+	company-web
+	company-shell
+	company-auctex))
 (unless package-archive-contents
   (package-refresh-contents))
 
