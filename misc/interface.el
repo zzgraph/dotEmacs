@@ -1,7 +1,7 @@
 ;;; Package --- interface.el
 ;;; Commentary:
 ;;; Code:
-(setq frame-title-format '("Emacs: %b    ;;" mode-name";;"))
+(setq frame-title-format '("Emacs: %b [" mode-name"]"))
 (setq system-time-locale "fa_IR")
 (display-time-mode 1)
 (if (boundp (menu-bar-mode))
@@ -32,12 +32,12 @@
 ;;; (set-frame-parameter nil 'fullscreen 'fullboth)
 ;;; (add-to-list 'default-frame-alist
 ;;; 	     'fullscreen 'fullboth)
-(set-frame-parameter (selected-frame)
-		     'alpha '(95 80)
-		     )
-(add-to-list 'default-frame-alist
-	     '(alpha 95 80)
-	     )
+;; (set-frame-parameter (selected-frame)
+;; 		     'alpha '(95 80)
+;; 		     )
+;; (add-to-list 'default-frame-alist
+;; 	     '(alpha 95 80)
+;; 	     )
 ;; (load-theme 'atom-dark t)
 ;; (load-theme 'leuven t)
 ;; (load-theme 'birds-of-paradise-plus t)
@@ -47,26 +47,26 @@
 ;; (load-theme 'solarized-dark t)
 ;; (load-theme 'graham t)
 (defvar zzgraph/theme)
-(setq zzgraph/theme 'deeper-blue)
+(setq zzgraph/theme 'gruvbox)
 (load-theme zzgraph/theme t)
 
 ;; Let's have some mode-line customization fun
 
-(set-face-attribute 'mode-line nil
-                    :box '(:width 1)
-		    :box '(:color "white")
-		    :box '(:style nil)
-		    :height 1.1
-		    :foreground "white smoke"
-		    :background "steel blue")
+;; (set-face-attribute 'mode-line nil
+;;                     :box '(:width 1)
+;; 		    :box '(:color "white")
+;; 		    :box '(:style nil)
+;; 		    :height 1.1
+;; 		    :foreground "white smoke"
+;; 		    :background "steel blue")
 
-(set-face-attribute 'mode-line-inactive nil
-                    :box '(:width 1)
-		    :box '(:color "white")
-		    :box '(:style nil)
-		    :height 1.1
-		    :foreground "white smoke"
-		    :background "DimGray")
+;; (set-face-attribute 'mode-line-inactive nil
+;;                     :box '(:width 1)
+;; 		    :box '(:color "white")
+;; 		    :box '(:style nil)
+;; 		    :height 1.1
+;; 		    :foreground "white smoke"
+;; 		    :background "DimGray")
 
 
 ;; (require 'powerline) (powerline-default-theme) (setq
@@ -78,6 +78,7 @@
 ;; Call function to change background to unspecified color if we open
 ;; up emacs in a terminal emulator
 (add-hook 'after-make-frame-functions 'zzgraph/load-bg-only-in-graphical-mode)
+
 
 (provide 'interface)
 ;;; interface.el ends here
