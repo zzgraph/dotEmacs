@@ -4,6 +4,7 @@
 ac-comphist.dat
 auto-save-list/
 elpa/
+!elpa/emacs-theme-gruvbox
 eshell
 ido.last
 projectile-bookmarks.eld
