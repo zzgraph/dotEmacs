@@ -28,7 +28,7 @@
 (defvar misc-settings-folder)
 (setq misc-settings-folder
       (expand-file-name "misc" user-emacs-directory))
-
+(add-to-list 'custom-theme-load-path "~/.emacs.d/elpa/emacs-theme-gruvbox")
 ;; Set a custom custom-file for Emacs own customize system
 (setq custom-file
       (expand-file-name "custom.el" misc-settings-folder))
