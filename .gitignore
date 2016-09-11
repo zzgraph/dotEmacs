@@ -3,7 +3,7 @@
 *.elc
 ac-comphist.dat
 auto-save-list/
-elpa/
+elpa/*
 !elpa/emacs-theme-gruvbox
 !elpa/emacs-theme-gruvbox/*
 eshell
