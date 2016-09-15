@@ -54,7 +54,9 @@
 	eshell-prompt-extras
 	company-web
 	company-shell
-	company-auctex))
+	company-auctex
+	rainbow-mode
+	smart-mode-line))
 (unless package-archive-contents
   (package-refresh-contents))
 
