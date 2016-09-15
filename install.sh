@@ -42,7 +42,8 @@ for i in $(ls ./misc/*.el)
          ln -s $PWD/$i $EMACS_CONFIGURATION_FOLDER/misc/$j;
 done        
 j="emacs-theme-gruvbox";
-if [ -e $EMACS_CONFIGURATION_FOLDER/elpa/$j ]; then
+if [ -e $EMACS_CONFIGURATION_FOLDER/elpa/$j ] && [ ! -L \
+	      $EMACS_CONFIGURATION_FOLDER/elpa/$j ]  ; then
   echo "misc/$j exists, I will safely rename it to $j.bak and install new one";
   mv $EMACS_CONFIGURATION_FOLDER/elpa/$j $EMACS_CONFIGURATION_FOLDER/elpa/$j.bak;
 fi
@@ -52,5 +53,5 @@ if [ -L $EMACS_CONFIGURATION_FOLDER/elpa/$j ]; then
        echo "OOPS! I removed symlink to your existing $j";
        echo "Excuse me :-( I betrayed your trust";
 fi
-ln -s $PWD/elpa/$j/ $EMACS_CONFIGURATION_FOLDER/elpa/$j;
+ln -s $PWD/elpa/$j $EMACS_CONFIGURATION_FOLDER/elpa/$j;
 
