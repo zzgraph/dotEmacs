@@ -21,7 +21,7 @@
 				  ))))
 (advice-add #'linum-update-window :after #'linum-update-window-scale-fix)
 (require 'hlinum)
-;; (hlinum-activate)
+(hlinum-activate)
 
 (provide 'linumInit)
 ;;; linumInit.el ends here
