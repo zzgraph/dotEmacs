@@ -2,10 +2,11 @@
 ;;;
 ;;; Commentary:
 ;;; Code:
-(add-to-list 'default-frame-alist '(font . "Source Code Pro-10"))
+(add-to-list 'default-frame-alist '(font . "Vazir Code-10"))
 (defun zzgraph/fix-fontset (&optional frame)
   (set-fontset-font "fontset-default" '(#x10000 . #x1ffff) "Symbola-18")
-  (set-fontset-font "fontset-default" 'arabic "DejaVu Sans"))
+;;  (set-fontset-font "fontset-default" 'arabic "DejaVu Sans")
+  )
 (zzgraph/fix-fontset)
 (add-hook 'after-make-frame-functions 'zzgraph/fix-fontset)
 
