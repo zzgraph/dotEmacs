@@ -42,6 +42,7 @@
 ;; (require 'idoInit)
 (require 'functionsInit)
 (require 'engineInit)
+(require 'linumInit)
 (require 'interface)
 (require 'orgmodeInit)
 (require 'projectileInit)
@@ -51,7 +52,6 @@
 (require 'magitInit)
 ;; (require 'virtualenvwrapperInit)
 (require 'yasInit)
-(require 'linumInit)
 (require 'flycheckInit)
 (require 'googleTranslateInit)
 ;; (require 'keyboardMacros)
@@ -68,9 +68,9 @@
 (require 'eldocInit)
 (require 'ciderInit)
 (require 'clojureInit)
+(require 'undoTreeInit)
 (require 'keyBindings)
 
 
-(global-undo-tree-mode)
 (provide 'init)
 ;;; init.el ends Here
