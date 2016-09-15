@@ -49,7 +49,7 @@
 (defvar zzgraph/theme)
 (setq zzgraph/theme 'gruvbox)
 (load-theme zzgraph/theme t)
-
+(sml/setup)
 ;; Let's have some mode-line customization fun
 
 ;; (set-face-attribute 'mode-line nil
