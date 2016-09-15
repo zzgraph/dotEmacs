@@ -30,8 +30,6 @@
 ;; magit Keybindings
 (global-set-key (kbd "C-x g") 'magit-status)
 
-;; undotree-mode Keybindings
-(global-set-key (kbd "M-/") 'undo-tree-visualize)
 
 ;; when we have windmove why we need this?
 (global-set-key (kbd "C-M-z") 'switch-window)
