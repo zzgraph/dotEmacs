@@ -2,7 +2,7 @@
 ;;;
 ;;; Commentary:
 ;;; Code:
-(add-to-list 'default-frame-alist '(font . "Vazir Code-10"))
+(add-to-list 'default-frame-alist '(font . "Vazir Code-12"))
 (defun zzgraph/fix-fontset (&optional frame)
   (set-fontset-font "fontset-default" '(#x10000 . #x1ffff) "Symbola-18")
 ;;  (set-fontset-font "fontset-default" 'arabic "DejaVu Sans")
