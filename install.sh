@@ -26,6 +26,17 @@ if [ ! -d $EMACS_CONFIGURATION_FOLDER/misc ]; then
     mkdir $EMACS_CONFIGURATION_FOLDER/misc;
 fi
 
+if [ -L $EMACS_CONFIGURATION_FOLDER/personal ]; then
+         rm $EMACS_CONFIGURATION_FOLDER/init.el;
+         echo "init.el exists but it's a symlink";
+         echo "OOPS! I removed symlink to your existing init.el";
+         echo "Excuse me :-( I betrayed your trust";
+fi
+
+ln -s $PWD/personal $EMACS_CONFIGURATION_FOLDER/personal;
+
+
+
 for i in $(ls ./misc/*.el)
     do 
          j=$(basename $i);
