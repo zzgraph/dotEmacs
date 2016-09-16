@@ -12,6 +12,6 @@
 (add-hook 'lisp-interaction-mode-hook #'enable-paredit-mode)
 (add-hook 'scheme-mode-hook           #'enable-paredit-mode)
 (add-hook 'clojure-mode-hook          #'enable-paredit-mode)
-(add-hook 'cider-repl-mode-hook       #'paredit-mode)
+(add-hook 'cider-repl-mode-hook       #'enable-paredit-mode)
 (provide 'pareditInit)
 ;;; pareditInit.el ends here
