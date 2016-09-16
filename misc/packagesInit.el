@@ -1,4 +1,4 @@
-;;; packagesInit.el --- Packagers Condigurations
+;;; packagesInit.el --- Packagers Configurations
 ;;; Commentary:
 ;; List of archives to be used by packages.el
 ;; List of packages to be checked if installed at startup
@@ -21,6 +21,7 @@
 	helm
 	helm-projectile
 	helm-descbinds
+	helm-flyspell
 	projectile
 	engine-mode
 	flycheck
@@ -38,6 +39,8 @@
 	google-translate
 	ido-ubiquitous
 	flx
+	ace-jump-mode
+	ace-window
 	ido-vertical-mode
 	hlinum
 	org
@@ -56,7 +59,8 @@
 	company-shell
 	company-auctex
 	rainbow-mode
-	smart-mode-line))
+	smart-mode-line
+	anzu))
 (unless package-archive-contents
   (package-refresh-contents))
 

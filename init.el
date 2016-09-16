@@ -24,14 +24,16 @@
 (epa-file-enable)
 (windmove-default-keybindings)
 (electric-pair-mode)
-
+(save-place-mode t)
 (defvar misc-settings-folder)
 (setq misc-settings-folder
       (expand-file-name "misc" user-emacs-directory))
+(setq personal-settings-folder
+      (expand-file-name "personal" user-emacs-directory))
 (add-to-list 'custom-theme-load-path "~/.emacs.d/elpa/emacs-theme-gruvbox")
 ;; Set a custom custom-file for Emacs own customize system
 (setq custom-file
-      (expand-file-name "custom.el" misc-settings-folder))
+      (expand-file-name "custom.el" personal-settings-folder))
 
 (load custom-file)
 
@@ -70,7 +72,7 @@
 (require 'clojureInit)
 (require 'undoTreeInit)
 (require 'keyBindings)
-
+(require 'anzuInit)
 
 (provide 'init)
 ;;; init.el ends Here
