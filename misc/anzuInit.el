@@ -1,4 +1,4 @@
-;;; Package --- anzuInit.el
+;;; anzuInit.el --- Configuration fo anzu
 ;;; Commentary:
 ;; Initialization settings for anzu mode.
 
