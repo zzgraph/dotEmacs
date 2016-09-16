@@ -35,7 +35,10 @@
 (global-set-key (kbd "C-M-z") 'switch-window)
 
 ;; Ace-jump Keybinding
-(global-set-key (kbd "C->") 'ace-jump-mode)
+(global-set-key (kbd "s-j") 'ace-jump-mode)
+
+;; Ace-window Keybinding
+(global-set-key (kbd "s-w") 'ace-window)
 
 ;; Google Translator
 (global-set-key (kbd "C-c t") 'google-translate-smooth-translate)
@@ -49,7 +52,7 @@
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (global-set-key (kbd "C-x b") 'helm-mini)
-(global-set-key (kbd "M-y") 'helm-show-kill-ring)
+(global-set-key (kbd "\C-x-\M-y") 'helm-show-kill-ring)
 
 ;; Flyspell-helm
 ;; (global-set-key (kbd "C-;") 'helm-flyspell-correct)
@@ -67,7 +70,7 @@
 
 
 ;; Enable ibuffer instead of Buffer-list
-(global-set-key (kbd "C-x C-b") 'ibuffer)
+(global-set-key (kbd "C-x C-b") 'ibuffer-other-window)
 
 (provide 'keyBindings)
 ;;; keyBindings.el ends here
