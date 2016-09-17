@@ -27,7 +27,7 @@ if [ ! -d $EMACS_CONFIGURATION_FOLDER/misc ]; then
 fi
 
 if [ -L $EMACS_CONFIGURATION_FOLDER/personal ]; then
-         rm $EMACS_CONFIGURATION_FOLDER/init.el;
+         rm $EMACS_CONFIGURATION_FOLDER/personal;
          echo "init.el exists but it's a symlink";
          echo "OOPS! I removed symlink to your existing init.el";
          echo "Excuse me :-( I betrayed your trust";
