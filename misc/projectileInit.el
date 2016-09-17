@@ -4,8 +4,10 @@
 (require 'projectile)
 
 (projectile-global-mode)
-(setq projectile-completion-system 'helm)
-(helm-projectile-on)
+;; (setq projectile-completion-system 'helm)
+;; (helm-projectile-on)
+(counsel-projectile-on)
+(setq projectile-completion-system 'ivy)
 (setq projectile-enable-caching t)
 
 (provide 'projectileInit)

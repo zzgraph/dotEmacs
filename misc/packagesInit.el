@@ -18,30 +18,50 @@
 
 (setq zzgraph/packages
       '(magit
-	helm
-	helm-projectile
-	helm-descbinds
-	helm-flyspell
+	;;; Helm (Replaced with ivy for now)
+	;; helm
+	;; helm-projectile
+	;; helm-descbinds
+	;; helm-flyspell
+	
+	;;; Ivy Group
+	flyspell-correct-ivy
+	ivy
+	counsel
+	counsel-projectile
+	ivy-hydra
+	hydra
+
+	;;;Projectile
 	projectile
+
+	ag
 	engine-mode
 	flycheck
 	yasnippet
 	clojure-mode
 	cider
 	clojure-mode-extra-font-locking
-	auto-complete
+	;;; ac auto complete (replaced with company)
+	;; auto-complete
+
+	;;; Company
 	company
 	company-jedi
 	slime-company
+	company-quickhelp
+	company-web
+	company-shell
+	company-auctex
+	
+	eshell-prompt-extras
 	diminish
 	engine-mode
 	pcomplete-extension
 	google-translate
-	ido-ubiquitous
 	flx
 	ace-jump-mode
 	ace-window
-	ido-vertical-mode
 	hlinum
 	org
 	org-plus-contrib
@@ -53,11 +73,6 @@
         esh-help
 	virtualenvwrapper
 	emms
-	company-quickhelp
-	eshell-prompt-extras
-	company-web
-	company-shell
-	company-auctex
 	rainbow-mode
 	smart-mode-line
 	anzu))
