@@ -22,8 +22,13 @@ fi
 
 ln -s $PWD/init.el $EMACS_CONFIGURATION_FOLDER/init.el;
 
-if [ ! -d $EMACS_CONFIGURATION_FOLDER/misc ]; then
-    mkdir $EMACS_CONFIGURATION_FOLDER/misc;
+
+
+if [ -e $EMACS_CONFIGURATION_FOLDER/personal ] && [ ! -L \
+	      $EMACS_CONFIGURATION_FOLDER/personal ]  ; then
+  echo "misc/$j exists, I will safely rename it to $j.bak and install new one";
+  mv $EMACS_CONFIGURATION_FOLDER/elpa/personal \
+     $EMACS_CONFIGURATION_FOLDER/elpa/personal.bak;
 fi
 
 if [ -L $EMACS_CONFIGURATION_FOLDER/personal ]; then
@@ -35,6 +40,10 @@ fi
 
 ln -s $PWD/personal $EMACS_CONFIGURATION_FOLDER/personal;
 
+
+if [ ! -d $EMACS_CONFIGURATION_FOLDER/misc ]; then
+    mkdir $EMACS_CONFIGURATION_FOLDER/misc;
+fi
 
 
 for i in $(ls ./misc/*.el)

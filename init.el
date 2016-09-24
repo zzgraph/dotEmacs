@@ -19,12 +19,23 @@
 
 ;; warn when opening files bigger than 100MB
 (setq large-file-warning-threshold 100000000)
+
+(setq inhibit-default-init t)
+(setq message-log-max 10000)
+
+;; Please don't load outdated byte code
+(setq load-prefer-newer t)
+
+
+
 ;;; (require 'tls)
-(require 'epa-file)
-(epa-file-enable)
+;; (require 'epa-file)
+;; (epa-file-enable)
+
 (windmove-default-keybindings)
 (electric-pair-mode)
 (save-place-mode t)
+
 (defvar misc-settings-folder)
 (setq misc-settings-folder
       (expand-file-name "misc" user-emacs-directory))
@@ -36,6 +47,12 @@
       (expand-file-name "custom.el" personal-settings-folder))
 
 (load custom-file)
+
+;;; Bookmarks
+
+(setq bookmark-default-file
+      (expand-file-name "bookmarks" personal-settings-folder))
+(setq bookmark-save-flag 1)
 
 (add-to-list 'load-path misc-settings-folder)
 (require 'personal)
