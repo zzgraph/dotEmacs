@@ -53,6 +53,7 @@
 	company-web
 	company-shell
 	company-auctex
+	readline-complete
 	
 	eshell-prompt-extras
 	diminish

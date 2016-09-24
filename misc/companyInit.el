@@ -2,14 +2,20 @@
 ;;; Commentary:
 ;;; Code:
 (require 'company)
+(require 'slime-company)
+
 (add-hook 'after-init-hook 'global-company-mode)
+
+;; (push 'slime-company company-backends)
+
 (push 'company-readline company-backends)
-(push 'slime-company company-backends)
 (add-hook 'rlc-no-readline-hook (lambda () (company-mode -1)))
 (company-quickhelp-mode 1)
+
 (eval-after-load 'company
   '(define-key company-active-map (kbd "M-h") #'company-quickhelp-manual-begin))
-(require 'color)
+
+;; (require 'color)
 
 ;; (let ((bg (face-attribute 'default :background)))
 ;;   (custom-set-faces
@@ -38,9 +44,9 @@
 (setq company-backends (mapcar #'company-mode/backend-with-yas company-backends))
 
 ;; helm-company choose from company completions with C-:
-(with-eval-after-load 'company
-  (define-key company-mode-map (kbd "C-:") 'helm-company)
-  (define-key company-active-map (kbd "C-:") 'helm-company))
+;; (with-eval-after-load 'company
+  ;; (define-key company-mode-map (kbd "C-:") 'helm-company)
+  ;; (define-key company-active-map (kbd "C-:") 'helm-company))
 
 (provide 'companyInit)
 ;;; companyInit.el ends here
