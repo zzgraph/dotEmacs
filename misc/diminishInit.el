@@ -10,6 +10,10 @@
 (eval-after-load "yasnippet" '(diminish 'yas-minor-mode))
 (eval-after-load "simple" '(diminish 'visual-line-mode))
 (eval-after-load "undo-tree" '(diminish 'undo-tree-mode))
+(eval-after-load "ivy" '(diminish 'ivy-mode))
+(eval-after-load "anzu" '(diminish 'anzu-mode))
+
+
 
 (provide 'diminishInit)
 ;;; diminishInit.el ends here
