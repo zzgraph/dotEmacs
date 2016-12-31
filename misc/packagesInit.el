@@ -31,6 +31,7 @@
 	counsel-projectile
 	ivy-hydra
 	hydra
+	ivy-rich
 
 	;;;Projectile
 	projectile
@@ -76,7 +77,8 @@
 	emms
 	rainbow-mode
 	smart-mode-line
-	anzu))
+	anzu
+	gruvbox-theme))
 (unless package-archive-contents
   (package-refresh-contents))
 
