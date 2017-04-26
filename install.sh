@@ -1,6 +1,23 @@
 #!/usr/bin/env bash
 
-EMACS_CONFIGURATION_FOLDER=~/.emacs.d
+EMACS_CONFIGURATION_FOLDER=$HOME/.emacs.d
+SYSTEMD_USER_DIR=$HOME/.config/systemd/user
+
+if [ ! -d $SYSTEMD_USER_DIR ]; then
+    mkdir -p $SYSTEMD_USER_DIR;
+    echo "Making ~/.config/systemd/user/ directory"
+fi
+
+if [ -e $SYSTEMD_USER_DIR/emacs.service ]; then
+    mv $SYSTEMD_USER_DIR/emacs.service $SYSTEMD_USER_DIR/emacs.service.bak;
+    mv $PWD/emacs.service $SYSTEMD_USER_DIR/emacs.service;
+    echo "Creating systemd user unit file for emacs daemon";
+fi
+
+if [ -e $HOME/.emacs ]; then
+      echo "~/.emacs exists I'll safely rename it to init.el.bak and install new one";
+    mv $HOME/.emacs $HOME/.emacs.bak;
+fi
 
 if [ ! -d $EMACS_CONFIGURATION_FOLDER ]; then
     mkdir $EMACS_CONFIGURATION_FOLDER;
@@ -38,7 +55,15 @@ if [ -L $EMACS_CONFIGURATION_FOLDER/personal ]; then
          echo "Excuse me :-( I betrayed your trust";
 fi
 
-ln -s $PWD/personal $EMACS_CONFIGURATION_FOLDER/personal;
+
+if [ ! -d $EMACS_CONFIGURATION_FOLDER/personal ]; then
+    mkdir $EMACS_CONFIGURATION_FOLDER/personal;
+fi
+
+
+if [ ! -e $EMACS_CONFIGURATION_FOLDER/personal/custom.el ]; then
+    touch $EMACS_CONFIGURATION_FOLDER/personal/custom.el;
+fi
 
 
 if [ ! -d $EMACS_CONFIGURATION_FOLDER/misc ]; then
