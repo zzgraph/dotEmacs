@@ -11,9 +11,11 @@ fi
 
 if [ -e $SYSTEMD_USER_DIR/emacs.service ]; then
     mv $SYSTEMD_USER_DIR/emacs.service $SYSTEMD_USER_DIR/emacs.service.bak;
-    ln -s $PWD/emacs.service $SYSTEMD_USER_DIR/emacs.service;
-    echo "Creating systemd user unit file for emacs daemon";
 fi
+
+ln -s $PWD/emacs.service $SYSTEMD_USER_DIR/emacs.service;
+echo "Creating systemd user unit file for emacs daemon";
+
 
 if [ ! -d $USER_DESKTOP_ENTRY_DIR ]; then
     mkdir -p $USER_DESKTOP_ENTRY_DIR;
@@ -22,9 +24,10 @@ fi
 
 if [ -e $USER_DESKTOP_ENTRY_DIR/emacsclient.desktop ]; then
     mv $USER_DESKTOP_ENTRY_DIR/emacsclient.desktop $USER_DESKTOP_ENTRY_DIR/emacsclient.desktop.bak;
-    ln -s $PWD/emacsclient.desktop $USER_DESKTOP_ENTRY_DIR/emacsclient.desktop;
-    echo "Creating systemd user unit file for emacs daemon";
 fi
+
+ln -s $PWD/emacsclient.desktop $USER_DESKTOP_ENTRY_DIR/emacsclient.desktop;
+echo "Creating desktop entry file for Emacs Client";
 
 if [ -e $HOME/.emacs ]; then
       echo "~/.emacs exists I'll safely rename it to init.el.bak and install new one";
