@@ -2,6 +2,7 @@
 
 EMACS_CONFIGURATION_FOLDER=$HOME/.emacs.d
 SYSTEMD_USER_DIR=$HOME/.config/systemd/user
+USER_DESKTOP_ENTRY_DIR=$HOME/.local/share/applications
 
 if [ ! -d $SYSTEMD_USER_DIR ]; then
     mkdir -p $SYSTEMD_USER_DIR;
@@ -10,7 +11,18 @@ fi
 
 if [ -e $SYSTEMD_USER_DIR/emacs.service ]; then
     mv $SYSTEMD_USER_DIR/emacs.service $SYSTEMD_USER_DIR/emacs.service.bak;
-    mv $PWD/emacs.service $SYSTEMD_USER_DIR/emacs.service;
+    ln -s $PWD/emacs.service $SYSTEMD_USER_DIR/emacs.service;
+    echo "Creating systemd user unit file for emacs daemon";
+fi
+
+if [ ! -d $USER_DESKTOP_ENTRY_DIR ]; then
+    mkdir -p $USER_DESKTOP_ENTRY_DIR;
+    echo "Making ~/.local/share/applications/ directory"
+fi
+
+if [ -e $USER_DESKTOP_ENTRY_DIR/emacsclient.desktop ]; then
+    mv $USER_DESKTOP_ENTRY_DIR/emacsclient.desktop $USER_DESKTOP_ENTRY_DIR/emacsclient.desktop.bak;
+    ln -s $PWD/emacsclient.desktop $USER_DESKTOP_ENTRY_DIR/emacsclient.desktop;
     echo "Creating systemd user unit file for emacs daemon";
 fi
 
