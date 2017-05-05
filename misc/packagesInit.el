@@ -78,7 +78,8 @@
 	rainbow-mode
 	smart-mode-line
 	anzu
-	gruvbox-theme))
+	gruvbox-theme
+	haskell-mode))
 (unless package-archive-contents
   (package-refresh-contents))
 
