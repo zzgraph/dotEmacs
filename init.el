@@ -91,6 +91,8 @@
 (require 'undoTreeInit)
 (require 'keyBindings)
 (require 'anzuInit)
+(require 'rustInit)
+(require 'emmetInit)
 
 (provide 'init)
 ;;; init.el ends Here
