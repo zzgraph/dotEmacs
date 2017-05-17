@@ -79,7 +79,17 @@
 	smart-mode-line
 	anzu
 	gruvbox-theme
-	haskell-mode))
+	haskell-mode
+	gitignore-mode
+	hl-todo
+	emmet-mode
+
+	;;Rust programming language
+	rust-mode
+	flycheck-rust
+	racer
+	company-racer
+	))
 (unless package-archive-contents
   (package-refresh-contents))
 
