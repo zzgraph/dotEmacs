@@ -89,6 +89,7 @@
 	js2-mode
 	skewer-mode
 	web-mode
+	impatient-mode
 
 	;;Rust programming language
 	rust-mode
