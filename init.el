@@ -93,6 +93,7 @@
 (require 'anzuInit)
 (require 'rustInit)
 (require 'emmetInit)
+(require 'skewerInit)
 
 (provide 'init)
 ;;; init.el ends Here

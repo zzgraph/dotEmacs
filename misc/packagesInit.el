@@ -82,7 +82,12 @@
 	haskell-mode
 	gitignore-mode
 	hl-todo
+
+	;;Web development
 	emmet-mode
+	simple-httpd
+	js2-mode
+	skewer-mode
 
 	;;Rust programming language
 	rust-mode

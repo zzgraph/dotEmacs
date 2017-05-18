@@ -58,9 +58,9 @@ ln -s $PWD/init.el $EMACS_CONFIGURATION_FOLDER/init.el;
 
 if [ -e $EMACS_CONFIGURATION_FOLDER/personal ] && [ ! -L \
 	      $EMACS_CONFIGURATION_FOLDER/personal ]  ; then
-  echo "misc/$j exists, I will safely rename it to $j.bak and install new one";
-  mv $EMACS_CONFIGURATION_FOLDER/elpa/personal \
-     $EMACS_CONFIGURATION_FOLDER/elpa/personal.bak;
+  echo "personal folder exists, I will safely rename it to personal.bak and install new one";
+  mv $EMACS_CONFIGURATION_FOLDER/personal \
+     $EMACS_CONFIGURATION_FOLDER/personal.bak;
 fi
 
 if [ -L $EMACS_CONFIGURATION_FOLDER/personal ]; then
