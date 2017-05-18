@@ -94,6 +94,7 @@
 (require 'rustInit)
 (require 'emmetInit)
 (require 'skewerInit)
+(require 'webInit)
 
 (provide 'init)
 ;;; init.el ends Here

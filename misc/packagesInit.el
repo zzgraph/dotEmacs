@@ -88,6 +88,7 @@
 	simple-httpd
 	js2-mode
 	skewer-mode
+	web-mode
 
 	;;Rust programming language
 	rust-mode
