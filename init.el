@@ -39,6 +39,7 @@
 (defvar misc-settings-folder)
 (setq misc-settings-folder
       (expand-file-name "misc" user-emacs-directory))
+(defvar personal-settings-folder)
 (setq personal-settings-folder
       (expand-file-name "personal" user-emacs-directory))
 ;; (add-to-list 'custom-theme-load-path "~/.emacs.d/elpa/emacs-theme-gruvbox")
@@ -69,7 +70,7 @@
 
 (require 'pythonInit)
 (require 'magitInit)
-;; (require 'virtualenvwrapperInit)
+(require 'virtualenvwrapperInit)
 (require 'yasInit)
 (require 'flycheckInit)
 (require 'googleTranslateInit)
@@ -86,15 +87,16 @@
 (require 'diminishInit)
 (require 'pareditInit)
 (require 'eldocInit)
-(require 'ciderInit)
-(require 'clojureInit)
+;; (require 'ciderInit)
+;; (require 'clojureInit)
 (require 'undoTreeInit)
 (require 'keyBindings)
-(require 'anzuInit)
-(require 'rustInit)
-(require 'emmetInit)
+;; (require 'anzuInit)
+(require 'rustIfnit)
 (require 'skewerInit)
 (require 'webInit)
+(require 'emmetInit)
+(require 'diredInit)
 
 (provide 'init)
 ;;; init.el ends Here
