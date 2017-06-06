@@ -8,6 +8,8 @@
 ;; going to work, and let's use nlinum instead of linum
 (add-hook 'prog-mode-hook 'linum-mode)
 
+(setq linum-format "%3d")
+
 ;; Fix Line number scaling based on window font scale
 ;; Source: http://www.emacswiki.org/emacs/LineNumbers#toc14
 (defun linum-update-window-scale-fix (window)
