@@ -17,8 +17,7 @@
 (package-initialize)
 
 (setq zzgraph/packages
-      '(magit
-	;;; Helm (Replaced with ivy for now)
+      '(;;; Helm (Replaced with ivy for now)
 	;; helm
 	;; helm-projectile
 	;; helm-descbinds
@@ -36,15 +35,12 @@
 	;;;Projectile
 	projectile
 
-	ag
-	engine-mode
-	flycheck
-	yasnippet
-	clojure-mode
-	cider
-	clojure-mode-extra-font-locking
+	
+	;clojure-mode
+	;cider
+	;clojure-mode-extra-font-locking
 	;;; ac auto complete (replaced with company)
-	;; auto-complete
+	; auto-complete
 
 	;;; Company
 	company
@@ -54,35 +50,22 @@
 	company-web
 	company-shell
 	company-auctex
-	readline-complete
-	
-	eshell-prompt-extras
-	diminish
-	engine-mode
-	pcomplete-extension
-	google-translate
-	flx
-	ace-jump-mode
-	ace-window
-	hlinum
+
+	;; org-mode
 	org
 	org-plus-contrib
-	paredit
-	python-django
-	slime
-	undo-tree
-        bbdb
-        esh-help
-	virtualenvwrapper
-	emms
-	rainbow-mode
-	smart-mode-line
-	anzu
-	gruvbox-theme
-	haskell-mode
-	gitignore-mode
-	hl-todo
+	ox-pandoc
 
+	;; eshell
+	eshell-prompt-extras
+	esh-help
+	eshell-git-prompt
+
+	;; Python
+	python-django
+	jedi
+	virtualenvwrapper
+	
 	;;Web development
 	emmet-mode
 	simple-httpd
@@ -96,7 +79,35 @@
 	flycheck-rust
 	racer
 	company-racer
-	))
+
+	;; Misc
+	magit
+	ag
+	php-mode
+	engine-mode
+	flycheck
+	yasnippet
+	readline-complete
+	diminish
+	engine-mode
+	pcomplete-extension
+	google-translate
+	flx
+	ace-jump-mode
+	ace-window
+	hlinum
+	paredit
+	slime
+	undo-tree
+        bbdb
+        emms
+	rainbow-mode
+	smart-mode-line
+	anzu
+	gruvbox-theme
+	haskell-mode
+	gitignore-mode
+	hl-todo))
 (unless package-archive-contents
   (package-refresh-contents))
 
