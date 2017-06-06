@@ -35,10 +35,10 @@
 (global-set-key (kbd "C-M-z") 'switch-window)
 
 ;; Ace-jump Keybinding
-(global-set-key (kbd "s-j") 'ace-jump-mode)
+;; (global-set-key (kbd "s-j") 'ace-jump-mode)
 
 ;; Ace-window Keybinding
-(global-set-key (kbd "s-w") 'ace-window)
+;; (global-set-key (kbd "s-w") 'ace-window)
 
 ;; Google Translator
 (global-set-key (kbd "C-c t") 'google-translate-smooth-translate)
