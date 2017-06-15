@@ -92,7 +92,7 @@
 (require 'undoTreeInit)
 (require 'keyBindings)
 ;; (require 'anzuInit)
-(require 'rustIfnit)
+(require 'rustInit)
 (require 'skewerInit)
 (require 'webInit)
 (require 'emmetInit)

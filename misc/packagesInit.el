@@ -55,6 +55,7 @@
 	org
 	org-plus-contrib
 	ox-pandoc
+	org2jekyll
 
 	;; eshell
 	eshell-prompt-extras
@@ -107,7 +108,9 @@
 	gruvbox-theme
 	haskell-mode
 	gitignore-mode
-	hl-todo))
+	hl-todo
+	yaml-mode
+	markdown-mode))
 (unless package-archive-contents
   (package-refresh-contents))
 
