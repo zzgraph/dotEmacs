@@ -88,16 +88,18 @@
 
 	;;Rust programming language
 	rust-mode
-	flycheck-rust
 	racer
 	company-racer
+
+	;; Flycheck
+	flycheck
+	flycheck-rust
 
 	;; Misc
 	magit
 	ag
 	php-mode
 	engine-mode
-	flycheck
 	yasnippet
 	readline-complete
 	diminish
