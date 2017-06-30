@@ -14,6 +14,8 @@
 ;; (setq shell-pop-window-position "bottom")
 ;; (global-set-key [f12] 'shell-pop)
 
+(require 'bash-completion)
+(bash-completion-setup)
 
 (provide 'shellPopInit)
 ;;; shellInit.el ends here

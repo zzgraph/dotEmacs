@@ -53,6 +53,7 @@
 	ac-html-csswatcher
 	ac-html-bootstrap
 	company-restclient
+	bash-completion
 
 	;; org-mode
 	org
