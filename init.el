@@ -99,6 +99,7 @@
 (require 'diredInit)
 (require 'ng2-mode)
 (require 'jsInit)
+(require 'editorConfigInit)
 
 (provide 'init)
 ;;; init.el ends Here
