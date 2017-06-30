@@ -87,6 +87,7 @@
 	sws-mode
 	jade-mode
 	stylus-mode
+	json-reformat
 
 	;;Rust programming language
 	rust-mode
@@ -129,7 +130,8 @@
 	hl-todo
 	yaml-mode
 	markdown-mode
-	shell-pop))
+	shell-pop
+	exec-path-from-shell))
 (unless package-archive-contents
   (package-refresh-contents))
 
