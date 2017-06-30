@@ -12,8 +12,20 @@
 (add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.hbs\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+
+
+(define-key web-mode-map (kbd "C-'") 'company-web-html)
+(setq web-mode-engines-alist  '(
+				("php"    . "\\.phtml\\'")
+				("blade"  . "\\.blade\\.")))
+(require 'sws-mode)
+(require 'jade-mode)
+(require 'stylus-mode)
+(add-to-list 'auto-mode-alist '("\\.styl\\'" . stylus-mode))
+
 
 (provide 'webInit)
 

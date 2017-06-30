@@ -50,6 +50,9 @@
 	company-web
 	company-shell
 	company-auctex
+	ac-html-csswatcher
+	ac-html-bootstrap
+	company-restclient
 
 	;; org-mode
 	org
@@ -74,6 +77,14 @@
 	skewer-mode
 	web-mode
 	impatient-mode
+	ng2-mode ;angular js
+	less-css-mode
+	ac-html-csswatcher
+	ac-html-bootstrap
+	restclient
+	sws-mode
+	jade-mode
+	stylus-mode
 
 	;;Rust programming language
 	rust-mode

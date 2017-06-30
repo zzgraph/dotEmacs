@@ -97,6 +97,8 @@
 (require 'webInit)
 (require 'emmetInit)
 (require 'diredInit)
+(require 'ng2-mode)
+(require 'jsInit)
 
 (provide 'init)
 ;;; init.el ends Here

@@ -3,6 +3,13 @@
 ;;; Code:
 (require 'company)
 (require 'slime-company)
+(require 'company-web-html)                          ; load company mode html backend
+;; and/or
+(require 'company-web-jade)                          ; load company mode jade backend
+(require 'company-web-slim)                          ; load company mode slim backend
+
+;; you may key bind, for example for web-mode:
+
 
 (add-hook 'after-init-hook 'global-company-mode)
 
@@ -15,6 +22,11 @@
 (eval-after-load 'company
   '(define-key company-active-map (kbd "M-h") #'company-quickhelp-manual-begin))
 
+(setq company-tooltip-limit 20)                      ; bigger popup window
+(setq company-tooltip-align-annotations 't)          ; align annotations to the right tooltip border
+(setq company-idle-delay .3)                         ; decrease delay before autocompletion popup shows
+(setq company-begin-commands '(self-insert-command)) ; start autocompletion only after typing
+(global-set-key (kbd "C-c /") 'company-files)        ; Force complete file names on "C-c /" key
 ;; (require 'color)
 
 ;; (let ((bg (face-attribute 'default :background)))
@@ -42,6 +54,7 @@
             '(:with company-yasnippet))))
 
 (setq company-backends (mapcar #'company-mode/backend-with-yas company-backends))
+(add-to-list 'company-backends 'company-restclient)
 
 ;; helm-company choose from company completions with C-:
 ;; (with-eval-after-load 'company
