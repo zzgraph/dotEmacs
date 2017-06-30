@@ -1,15 +1,6 @@
 #+OPTIONS: toc:1
 * changes and tests need to be done immediately
 
-** DONE automatically install required packages
-   CLOSED: [2017-06-30 Fri 09:57]
-  1) add a list variable of needed packages
-  2) check automatically those packages are installed or not by =package-installed-p=
-  3) use =package-install-package= to install required packages
-** DONE check if it works across machines
-   CLOSED: [2017-06-30 Fri 09:57]
-** DONE add windows specific configuration if needed to work with my tablet
-   CLOSED: [2017-06-30 Fri 09:57]
 ** TODO I always forget to quit gnus before closing Emacs frame
 
    Here is some functions from to let it do the thing, but I don't
@@ -34,12 +25,26 @@
 ** TODO Test notmuch search backend for GNUS
 ** TODO If Projectile project name=nil diminish projectile from mode-line
 
+** TODO MAYBE Rewrite all code base of org-babel and use-package macro
+** TODO FUN Rewrite installer instead of bash script use elisp getting evaluated by emacs.
+
 * Known Issues
-** DONE global linum-mode creates huge performance issues on big files 
-   CLOSED: [2017-06-30 Fri 09:57]
 
 * Done
+** DONE Disability to use ssh public key to connect remotes and push to github is now resolved, Using `exec-path-from-shell' and copy copying this great code:
 
+#+begin_src emacs-lisp
+(when (memq window-system '(nac ns x)) (exec-path-from-shell-initialize))
+
+(exec-path-from-shell-copy-env "SSH_AGENT_PID")
+(exec-path-from-shell-copy-env "SSH_AUTH_SOCK")
+#+end_src
+
+Provided by purcell [[https://github.com/purcell/exec-path-from-shell][purcell/exec-path-from-shell]]
+   
+   
+   
+   CLOSED: [2017-07-01 Sat 01:24]
 ** DONE +Change background color based on where I opened frame+
    CLOSED: [2015-10-23 Fri 13:01]
 
@@ -47,3 +52,15 @@
    theme, the color may override transparency settings in terminal
    emulator.
 
+** DONE global linum-mode creates huge performance issues on big files 
+   CLOSED: [2017-06-30 Fri 09:57]
+
+** DONE automatically install required packages
+   CLOSED: [2017-06-30 Fri 09:57]
+  1) add a list variable of needed packages
+  2) check automatically those packages are installed or not by =package-installed-p=
+  3) use =package-install-package= to install required packages
+** DONE check if it works across machines
+   CLOSED: [2017-06-30 Fri 09:57]
+** DONE add windows specific configuration if needed to work with my tablet
+   CLOSED: [2017-06-30 Fri 09:57]

@@ -7,9 +7,12 @@
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
 (package-initialize)
+
 (when (memq window-system '(nac ns x)) (exec-path-from-shell-initialize))
+
 (exec-path-from-shell-copy-env "SSH_AGENT_PID")
 (exec-path-from-shell-copy-env "SSH_AUTH_SOCK")
+
 (set-language-environment "UTF-8")
 (set-default-coding-systems 'utf-8)
 (set-locale-environment "fa")
