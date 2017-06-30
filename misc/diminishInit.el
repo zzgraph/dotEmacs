@@ -12,6 +12,9 @@
 (eval-after-load "undo-tree" '(diminish 'undo-tree-mode))
 (eval-after-load "ivy" '(diminish 'ivy-mode))
 (eval-after-load "anzu" '(diminish 'anzu-mode))
+(eval-after-load "paredit" '(diminish 'paredit-mode))
+(eval-after-load "eldoc" '(diminish 'eldoc-mode))
+(eval-after-load "editorconfig" '(diminish 'editorconfig-mode))
 
 
 
