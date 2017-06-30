@@ -1,4 +1,4 @@
-;;; packagesInit.el --- Packagers Configurations
+;;; packagesInit.el --- Packages Configurations
 ;;; Commentary:
 ;; List of archives to be used by packages.el
 ;; List of packages to be checked if installed at startup
@@ -15,7 +15,7 @@
 	     '("org" . "http://orgmode.org/elpa/")
 	     t)
 (package-initialize)
-
+(defvar zzgraph/packages)
 (setq zzgraph/packages
       '(;;; Helm (Replaced with ivy for now)
 	;; helm
@@ -77,7 +77,8 @@
 	skewer-mode
 	web-mode
 	impatient-mode
-	ng2-mode ;angular js
+	ng2-mode ;angular 2
+	json-mode
 	less-css-mode
 	ac-html-csswatcher
 	ac-html-bootstrap
@@ -93,7 +94,10 @@
 
 	;; Flycheck
 	flycheck
-	flycheck-rust
+	flycheck-color-mode-line ; colorify modeline according to the state of flycheck
+	flycheck-status-emoji ; Shows Emojis in modeline for flycheck status
+	flycheck-rust ; Rust language support
+	flycheck-checkbashisms ; Bash scripts support
 
 	;; Misc
 	magit
