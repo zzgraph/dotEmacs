@@ -51,11 +51,13 @@
 
 ;;; Bookmarks
 
+(require 'bookmark)
 (setq bookmark-default-file
       (expand-file-name "bookmarks" personal-settings-folder))
 (setq bookmark-save-flag 1)
 
 (add-to-list 'load-path misc-settings-folder)
+
 (require 'personal)
 (require 'packagesInit)
 (require 'customFacesInit)
