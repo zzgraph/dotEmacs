@@ -26,6 +26,8 @@
 (require 'stylus-mode)
 (add-to-list 'auto-mode-alist '("\\.styl\\'" . stylus-mode))
 
+(add-hook 'css-mode-hook 'rainbow-mode)
+
 
 (provide 'webInit)
 
