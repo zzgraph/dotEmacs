@@ -38,14 +38,7 @@
 (add-to-list 'default-frame-alist
 	     '(alpha 95 80)
 	     )
-;; (load-theme 'atom-dark t)
-;; (load-theme 'leuven t)
-;; (load-theme 'birds-of-paradise-plus t)
-;; (load-theme 'deeper-blue t)
-;; (load-theme 'tango t)
-;; (load-theme 'majapahit-dark t)
-;; (load-theme 'solarized-dark t)
-;; (load-theme 'graham t)
+
 (defvar zzgraph/theme)
 (setq zzgraph/theme 'gruvbox)
 (load-theme zzgraph/theme t)
