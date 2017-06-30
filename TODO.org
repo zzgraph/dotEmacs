@@ -1,12 +1,15 @@
 #+OPTIONS: toc:1
 * changes and tests need to be done immediately
 
-** TODO automatically install required packages
+** DONE automatically install required packages
+   CLOSED: [2017-06-30 Fri 09:57]
   1) add a list variable of needed packages
   2) check automatically those packages are installed or not by =package-installed-p=
   3) use =package-install-package= to install required packages
-** TODO check if it works across machines
-** TODO add windows specific configuration if needed to work with my tablet
+** DONE check if it works across machines
+   CLOSED: [2017-06-30 Fri 09:57]
+** DONE add windows specific configuration if needed to work with my tablet
+   CLOSED: [2017-06-30 Fri 09:57]
 ** TODO I always forget to quit gnus before closing Emacs frame
 
    Here is some functions from to let it do the thing, but I don't
@@ -32,7 +35,8 @@
 ** TODO If Projectile project name=nil diminish projectile from mode-line
 
 * Known Issues
-** TODO global linum-mode creates huge performance issues on big files 
+** DONE global linum-mode creates huge performance issues on big files 
+   CLOSED: [2017-06-30 Fri 09:57]
 
 * Done
 
