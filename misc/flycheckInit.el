@@ -31,7 +31,7 @@
 ;; checkbashisms installed on the system part of the rpmdevtools on
 ;; fedora machine can be installed by `sudo dnf install rpmdevtools'
 (eval-after-load 'flycheck
-  (add-hook 'flycheck-mode-hook #'flycheck-checkbashisms-setup))
+  '(flycheck-checkbashisms-setup))
 
 
 ;; Add rust support it needs flycheck-rust which is being

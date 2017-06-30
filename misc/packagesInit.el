@@ -127,7 +127,8 @@
 	gitignore-mode
 	hl-todo
 	yaml-mode
-	markdown-mode))
+	markdown-mode
+	shell-pop))
 (unless package-archive-contents
   (package-refresh-contents))
 

@@ -102,6 +102,7 @@
 (require 'ng2-mode)
 (require 'jsInit)
 (require 'editorConfigInit)
+(require 'shellPopInit)
 
 (provide 'init)
 ;;; init.el ends Here
