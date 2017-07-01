@@ -1,4 +1,4 @@
-;;; gitGutter.el --- Configurations for gitgutter
+;;; gitGutterInit.el --- Configurations for gitgutter
 ;;; Commentary:
 ;; 
 
@@ -32,5 +32,5 @@
 (global-set-key (kbd "C-x v SPC") #'git-gutter:mark-hunk)
 
 
-(provide 'gitGutter)
-;;; gitGutter.el ends here
+(provide 'gitGutterInit)
+;;; gitGutterInit.el ends here
