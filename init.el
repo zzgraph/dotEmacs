@@ -8,38 +8,10 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
-(when (memq window-system '(nac ns x)) (exec-path-from-shell-initialize))
-
-(exec-path-from-shell-copy-env "SSH_AGENT_PID")
-(exec-path-from-shell-copy-env "SSH_AUTH_SOCK")
-
-(set-language-environment "UTF-8")
-(set-default-coding-systems 'utf-8)
-(set-locale-environment "fa")
-(set-input-method "farsi-isiri-9147")
-;; from Prelude http://github.com/bbatsov/prelude
-;; reduce the frequency of garbage collection by making it happen on
-;; each 50MB of allocated data (the default is on every 0.76MB)
-(setq gc-cons-threshold 50000000)
-
-;; warn when opening files bigger than 100MB
-(setq large-file-warning-threshold 100000000)
-
-(setq inhibit-default-init t)
-(setq message-log-max 10000)
-
-;; Please don't load outdated byte code
-(setq load-prefer-newer t)
-
-
-
 ;;; (require 'tls)
 ;; (require 'epa-file)
 ;; (epa-file-enable)
 
-(windmove-default-keybindings)
-(electric-pair-mode)
-(save-place-mode t)
 
 (defvar misc-settings-folder)
 (setq misc-settings-folder
@@ -53,13 +25,6 @@
       (expand-file-name "custom.el" personal-settings-folder))
 
 (load custom-file)
-
-;;; Bookmarks
-
-(require 'bookmark)
-(setq bookmark-default-file
-      (expand-file-name "bookmarks" personal-settings-folder))
-(setq bookmark-save-flag 1)
 
 (add-to-list 'load-path misc-settings-folder)
 
@@ -97,8 +62,7 @@
 ;; (require 'ciderInit)
 ;; (require 'clojureInit)
 (require 'undoTreeInit)
-(require 'keyBindings)
-;; (require 'anzuInit)
+(require 'anzuInit)
 (require 'rustInit)
 (require 'skewerInit)
 (require 'webInit)
@@ -108,7 +72,9 @@
 (require 'jsInit)
 (require 'editorConfigInit)
 (require 'shellPopInit)
-(require 'gitGutter)
+(require 'gitGutterInit)
+(require 'editorInit)
+(require 'keyBindings)
 
 (provide 'init)
 ;;; init.el ends Here
