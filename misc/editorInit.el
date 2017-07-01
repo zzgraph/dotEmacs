@@ -17,7 +17,8 @@
 ;; newline required at the end of each file
 (setq require-final-newline t)
 
-;; Show λ instead of lambda in lisp and pretify other symbols in language context
+;; Show λ instead of lambda in lisp and prettify other symbols in
+;; language context
 (global-prettify-symbols-mode +1)
 
 
