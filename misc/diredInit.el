@@ -7,6 +7,7 @@
 (setq directory-free-space-args "-hTmP")
 (setq dired-dwim-target t)
 
+;; dired - reuse current buffer by pressing 'a'
 (put 'dired-find-alternate-file 'disabled nil)
 
 
