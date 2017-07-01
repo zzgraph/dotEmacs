@@ -17,6 +17,7 @@
 (eval-after-load "eldoc" '(diminish 'eldoc-mode))
 (eval-after-load "editorconfig" '(diminish 'editorconfig-mode))
 (eval-after-load "skewer" '(diminish 'skewer-mode))
+(eval-after-load "GitGutter" '(diminish 'git-gutter-mode))
 (eval-after-load 'js2-mode '(diminish 'js2-mode "JS2"))
 (diminish 'auto-revert-mode)
 
