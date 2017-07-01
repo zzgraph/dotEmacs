@@ -64,9 +64,13 @@
 (require 'flyspell-correct-ivy)
 (define-key flyspell-mode-map (kbd "C-;") 'flyspell-correct-previous-word-generic)
 
-;; Ivy key bindings
+;; Search and replace
+(global-set-key (kbd "C-s") 'isearch-forward)
+(global-set-key (kbd "C-S-s") 'swiper)
+(global-set-key (kbd "M-%") 'anzu-query-replace)
+(global-set-key (kbd "C-M-%") 'anzu-query-replace-regexp)
 
-(global-set-key "\C-s" 'swiper)
+;; Ivy key bindings
 (global-set-key (kbd "C-c C-r") 'ivy-resume)
 (global-set-key (kbd "<f6>") 'ivy-resume)
 (global-set-key (kbd "M-x") 'counsel-M-x)
