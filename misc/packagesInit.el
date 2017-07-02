@@ -35,6 +35,28 @@
 	;;;Projectile
 	projectile
 
+	;; interface, windows and buffers
+	;; spaceline
+	;; spaceline-all-the-icons-theme
+	gruvbox-theme
+	smart-mode-line
+	ace-jump-mode
+	ace-window
+	hlinum
+	;; all-the-icons
+	;; all-the-icons-dired
+
+
+	;; Version control
+	magit
+	git-gutter
+	gitignore-mode
+	
+
+	;; Major modes
+	yaml-mode
+	markdown-mode
+
 	
 	;clojure-mode
 	;cider
@@ -42,7 +64,7 @@
 	;;; ac auto complete (replaced with company)
 	; auto-complete
 
-	;;; Company
+	;;; Company and completion backends
 	company
 	company-jedi
 	slime-company
@@ -54,6 +76,10 @@
 	ac-html-bootstrap
 	company-restclient
 	bash-completion
+	company-tern
+	pcomplete-extension
+	readline-complete
+
 
 	;; org-mode
 	org
@@ -88,6 +114,7 @@
 	jade-mode
 	stylus-mode
 	json-reformat
+	tern
 
 	;;Rust programming language
 	rust-mode
@@ -102,36 +129,26 @@
 	flycheck-checkbashisms ; Bash scripts support
 
 	;; Misc
-	magit
 	ag
+	xterm-color
 	php-mode
 	engine-mode
 	yasnippet
-	readline-complete
 	diminish
-	engine-mode
-	pcomplete-extension
 	google-translate
 	flx
-	ace-jump-mode
-	ace-window
-	hlinum
 	paredit
 	slime
 	undo-tree
         bbdb
         emms
 	rainbow-mode
-	smart-mode-line
 	anzu
-	gruvbox-theme
 	haskell-mode
-	gitignore-mode
 	hl-todo
-	yaml-mode
-	markdown-mode
 	shell-pop
-	exec-path-from-shell))
+	exec-path-from-shell
+	which-key))
 (unless package-archive-contents
   (package-refresh-contents))
 
