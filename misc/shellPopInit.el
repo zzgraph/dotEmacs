@@ -6,16 +6,16 @@
 
 (require 'shell-pop)
 
-(setq shell-pop-autocd-to-working-dir t)
-(setq shell-pop-shell-type "eshell")
-(setq shell-pop-universal-key [f12])
-(setq shell-pop-window-size 20)
-(setq shell-pop-full-span t)
+;; (setq shell-pop-default-directory "/home/shibi")
+;; (setq shell-pop-shell-type  (quote ("eshell" "*eshell*"
+;; 				    (lambda nil (eshell)))))
+;; ;; (setq shell-pop-term-shell "/bin/bash")
+;; (setq shell-pop-universal-key "<f12>")
+;; (setq shell-pop-window-size 20)
+;; (setq shell-pop-full-span t)
 ;; (setq shell-pop-window-position "bottom")
-;; (global-set-key [f12] 'shell-pop)
-
-(require 'bash-completion)
-(bash-completion-setup)
+;; (setq shell-pop-full-span t)
+;(global-set-key [f12] 'shell-pop)
 
 (provide 'shellPopInit)
 ;;; shellInit.el ends here
