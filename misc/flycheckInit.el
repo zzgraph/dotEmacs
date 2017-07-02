@@ -57,11 +57,14 @@
 ;; or semistandard cli utilities which can be installed with
 ;; `npm install --global semistandard'
 
+(flycheck-add-mode 'javascript-eslint 'js2-mode)
+
 ;; For Typescript linting flycheck uses tslint cli tool that can be
 ;; installed with npm via `sudo npm install -g tslint' which needs
 ;; per-project configuration file
 
 ;; Setting executable for javascript semistandard linter
+(flycheck-add-mode 'javascript-standard 'js2-mode)
 (setq flycheck-javascript-standard-executable "semistandard")
 
 ;; For Mrkdown linting flycheck uses markdownlinr (mdl) cli tool that
