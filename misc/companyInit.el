@@ -18,6 +18,9 @@
 ;; Adding shell scripting completion and doc string support to company
 (add-to-list 'company-backends 'company-shell)
 
+;; Adding tern to company backends for javascript files
+(add-to-list 'company-backends 'company-tern)
+
 (push 'company-readline company-backends)
 (add-hook 'rlc-no-readline-hook (lambda () (company-mode -1)))
 
