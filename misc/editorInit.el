@@ -17,10 +17,18 @@
 ;; newline required at the end of each file
 (setq require-final-newline t)
 
+;; use which-key mode to help me find keybindings
+(require 'which-key)
+(which-key-mode)
+(which-key-setup-minibuffer)
+
 ;; Show λ instead of lambda in lisp and prettify other symbols in
 ;; language context
 (global-prettify-symbols-mode +1)
 
+;; enable disabled commands like narrowing and widening and
+;; upcase-downcase region
+(setq disabled-command-function nil)
 
 ;; highlight trailng white space
 (require 'whitespace)
