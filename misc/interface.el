@@ -1,18 +1,25 @@
 ;;; Package --- interface.el
 ;;; Commentary:
 ;;; Code:
+
+
 (setq frame-title-format '("Emacs: %b [" mode-name"]"))
 (setq system-time-locale "fa_IR")
-(display-time-mode 1)
+
+
+;; Remove menubar, toolbar and scrollbar
 (if (boundp (menu-bar-mode))
     (menu-bar-mode -1))
 (if (boundp (tool-bar-mode))
     (tool-bar-mode -1))
 (set-scroll-bar-mode nil)
+
+;; how to dosplay cursor
 (setq-default cursor-type '(bar . 2)
-	      cursor-in-non-selected-windows 'hollow)
+	      cursor-in-non-selected-windows 'hollow
+	      blink-cursor-mode nil)
 (global-font-lock-mode)
-(column-number-mode)
+
 (show-paren-mode)
 (global-hl-line-mode)
 (global-visual-line-mode t)
@@ -42,29 +49,7 @@
 (defvar zzgraph/theme)
 (setq zzgraph/theme 'gruvbox)
 (load-theme zzgraph/theme t)
-(sml/setup)
-;; Let's have some mode-line customization fun
 
-;; (set-face-attribute 'mode-line nil
-;;                     :box '(:width 1)
-;; 		    :box '(:color "white")
-;; 		    :box '(:style nil)
-;; 		    :height 1.1
-;; 		    :foreground "white smoke"
-;; 		    :background "steel blue")
-
-;; (set-face-attribute 'mode-line-inactive nil
-;;                     :box '(:width 1)
-;; 		    :box '(:color "white")
-;; 		    :box '(:style nil)
-;; 		    :height 1.1
-;; 		    :foreground "white smoke"
-;; 		    :background "DimGray")
-
-
-;; (require 'powerline) (powerline-default-theme) (setq
-;; powerline-default-separator 'arrow) ;; (load-theme
-;; 'airline-solarized-gui t) (load-theme 'airline-hybridline t)
 
 
 
