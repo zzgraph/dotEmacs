@@ -36,6 +36,7 @@
 (require 'engineInit)
 (require 'linumInit)
 (require 'interface)
+(require 'modeLineInit)
 (require 'orgmodeInit)
 (require 'projectileInit)
 ;; (require 'autocompleteInit)
@@ -72,9 +73,12 @@
 (require 'jsInit)
 (require 'editorConfigInit)
 (require 'shellPopInit)
+(require 'shellInit)
 (require 'gitGutterInit)
 (require 'editorInit)
+(require 'neoTreeInit)
 (require 'keyBindings)
 
 (provide 'init)
 ;;; init.el ends Here
+(put 'upcase-region 'disabled nil)
