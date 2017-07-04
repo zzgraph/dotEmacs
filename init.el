@@ -77,6 +77,7 @@
 (require 'gitGutterInit)
 (require 'editorInit)
 (require 'neoTreeInit)
+(require 'markDownInit)
 (require 'keyBindings)
 
 (provide 'init)
