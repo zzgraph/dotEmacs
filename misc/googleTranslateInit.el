@@ -1,3 +1,9 @@
+;;; googleTranslateInit.el --- Configuration to use google translate package
+;;; Commentary:
+;; 
+
+;;; Code:
+
 (require 'google-translate)
 (require 'google-translate-smooth-ui)
 
@@ -7,3 +13,4 @@
 
 
 (provide 'googleTranslateInit)
+;;; googleTranslateInit.el ends here
