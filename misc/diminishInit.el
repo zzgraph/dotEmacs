@@ -18,6 +18,7 @@
 (eval-after-load "editorconfig" '(diminish 'editorconfig-mode))
 (eval-after-load "skewer" '(diminish 'skewer-mode))
 (eval-after-load "skewer-css" '(diminish 'skewer-css-mode))
+(diminish 'which-key-mode)
 (diminish 'rainbow-mode)
 (diminish 'emmet-mode)
 (diminish 'git-gutter-mode)
