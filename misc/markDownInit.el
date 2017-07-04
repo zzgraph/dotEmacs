@@ -27,6 +27,9 @@
 ;; TODO see if electric-pair-mode for insert pairs of #, *, **, and
 ;; see if it's necessary.
 
+;; TODO Adding pandoc-mode to markdown mode
+;; http://joostkremers.github.io/pandoc-mode/
+
 ;; Use a temporary buffer with appropriate major mode to edit
 ;; code-blocks
 (eval-after-load 'markdown-mode
