@@ -7,12 +7,14 @@
 (setq system-time-locale "fa_IR")
 
 
-;; Remove menubar, toolbar and scrollbar
-(if (boundp (menu-bar-mode))
+;; Remove menubar, toolbar and scrollbar and tooltips
+(when (fboundp 'menu-bar-mode)
     (menu-bar-mode -1))
-(if (boundp (tool-bar-mode))
+(when (fboundp 'tool-bar-mode)
     (tool-bar-mode -1))
 (set-scroll-bar-mode nil)
+(when (fboundp 'tooltip-mode)
+    (tooltip-mode -1))
 
 ;; how to dosplay cursor
 (setq-default cursor-type '(bar . 2)
