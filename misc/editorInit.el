@@ -5,13 +5,15 @@
 ;;; Code:
 
 ;; use exec-path-from-shell to copy ssh environment
-
 (require 'exec-path-from-shell)
+
 (when (memq window-system '(nac ns x))
   (exec-path-from-shell-initialize))
 
 (exec-path-from-shell-copy-env "SSH_AGENT_PID")
 (exec-path-from-shell-copy-env "SSH_AUTH_SOCK")
+(exec-path-from-shell-copy-env "GOPATH")
+
 
 
 ;; newline required at the end of each file
@@ -32,7 +34,7 @@
 
 ;; highlight trailng white space
 (require 'whitespace)
-(setq whitespace-line-column 80) ;; limit line length
+(setq whitespace-line-column 80) ; limit line length
 (setq whitespace-style '(face tabs empty trailing lines-tail))
 
 ;; Treat Camelcase words as seprate words in prg-mode
@@ -44,10 +46,16 @@
 ;; enable to replace selected text
 (delete-selection-mode t)
 
+;; Use UTF-8 for everything
 (set-language-environment "UTF-8")
 (set-default-coding-systems 'utf-8)
+
+;; set locale to farsi
 (set-locale-environment "fa")
+
+;; set nitial quail keyboard layout to farsi
 (set-input-method "farsi-isiri-9147")
+
 ;; from Prelude http://github.com/bbatsov/prelude
 ;; reduce the frequency of garbage collection by making it happen
 ;; each 50MB of allocated data (the default is on every 0.76MB)
@@ -62,10 +70,26 @@
 ;; Please don't load outdated byte code
 (setq load-prefer-newer t)
 
+;; Use windmove to enable navigation between windows using shift-arrow
+;; keys
 (require 'windmove)
 (windmove-default-keybindings)
-(electric-pair-mode)
-(save-place-mode t)
+
+;; enabaling electric pair mode to automatically insert pairing
+;; bracket delimiters, it can be escaped using C-q, for example `C-q
+;; "' inserts only one double quotation mark without inserting second
+;; closing one
+(electric-pair-mode 1)
+
+;; Adding « » to electric pair mode for Persian texts
+;; snippet from here https://stackoverflow.com/a/27871987
+(defvar zzgraph/giumeh-electric-pairs '((?« . ?»))
+  "Electric pairs for inserting closing Persian quotation mark (گیومه).")
+(setq electric-pair-pairs
+      (append electric-pair-pairs zzgraph/giumeh-electric-pairs))
+(setq electric-pair-text-pairs electric-pair-pairs)
+
+(save-place-mode 1)
 
 ;;; Bookmarks
 
