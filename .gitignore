@@ -1,6 +1,6 @@
 *~
-\#*#
-.#*
+\#*\#
+.\#*
 *.elc
 ac-comphist.dat
 auto-save-list/
@@ -16,7 +16,7 @@ smex-items
 snippets/
 themes/
 thumbs/
-tutorial/
+tuذtorial/
 url/
 var/
 vendor/
@@ -29,3 +29,4 @@ cider-history
 sesseion*
 personal/
 TAGS
+places
