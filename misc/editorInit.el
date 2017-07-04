@@ -38,6 +38,9 @@
 ;; Treat Camelcase words as seprate words in prg-mode
 (add-hook 'prog-mode-hook 'subword-mode)
 
+;; Highlighting TODO, FIXME and others
+(global-hl-todo-mode t)
+
 ;; enable to replace selected text
 (delete-selection-mode t)
 
