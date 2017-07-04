@@ -5,6 +5,7 @@
 ;;; Code:
 
 (require 'package)
+
 (add-to-list 'package-archives
 	     '("melpa" . "https://melpa.org/packages/")
 	     t)
@@ -14,37 +15,40 @@
 (add-to-list 'package-archives
 	     '("org" . "http://orgmode.org/elpa/")
 	     t)
+
 (package-initialize)
+
 (defvar zzgraph/packages)
+
 (setq zzgraph/packages
-      '(;;; Helm (Replaced with ivy for now)
-	;; helm
-	;; helm-projectile
-	;; helm-descbinds
-	;; helm-flyspell
+      '(;; Helm (Replaced with ivy for now)
+	; helm
+	; helm-projectile
+	; helm-descbinds
+	; helm-flyspell
 	
 	;;; Ivy Group
-	flyspell-correct-ivy
 	ivy
 	counsel
 	counsel-projectile
 	ivy-hydra
 	hydra
 	ivy-rich
+	flyspell-correct-ivy
 
 	;;;Projectile
 	projectile
 
 	;; interface, windows and buffers
-	;; spaceline
-	;; spaceline-all-the-icons-theme
+	; spaceline
+	; spaceline-all-the-icons-theme
 	gruvbox-theme
 	smart-mode-line
 	ace-jump-mode
 	ace-window
 	hlinum
-	;; all-the-icons
-	;; all-the-icons-dired
+	all-the-icons
+	; all-the-icons-dired
 
 
 	;; Version control
@@ -55,16 +59,18 @@
 
 	;; Major modes
 	yaml-mode
-	markdown-mode
+	haskell-mode
 
 	
-	;clojure-mode
-	;cider
-	;clojure-mode-extra-font-locking
-	;;; ac auto complete (replaced with company)
+	;; Clojure Major mode
+	; clojure-mode
+	; cider
+	; clojure-mode-extra-font-locking
+
+	;; ac auto complete (replaced with company)
 	; auto-complete
 
-	;;; Company and completion backends
+	;; Company and completion backends
 	company
 	company-jedi
 	slime-company
@@ -80,6 +86,9 @@
 	pcomplete-extension
 	readline-complete
 
+	;; Markdown
+	markdown-mode
+	markdown-edit-indirect
 
 	;; org-mode
 	org
@@ -100,12 +109,8 @@
 	;;Web development
 	emmet-mode
 	simple-httpd
-	js2-mode
-	skewer-mode
 	web-mode
 	impatient-mode
-	ng2-mode ;angular 2
-	json-mode
 	less-css-mode
 	ac-html-csswatcher
 	ac-html-bootstrap
@@ -113,9 +118,15 @@
 	sws-mode
 	jade-mode
 	stylus-mode
-	json-reformat
-	tern
 
+	;; Javascript
+	js2-mode
+	skewer-mode
+	tern
+	json-mode
+	json-reformat
+	ng2-mode ;angular 2
+	
 	;;Rust programming language
 	rust-mode
 	racer
@@ -144,18 +155,18 @@
         emms
 	rainbow-mode
 	anzu
-	haskell-mode
 	hl-todo
 	shell-pop
 	exec-path-from-shell
-	which-key))
+	which-key
+	system-packages))
+
 (unless package-archive-contents
   (package-refresh-contents))
 
 (dolist (package zzgraph/packages)
   (unless (package-installed-p package)
-    (package-install package)))
-
+    (package-install package)))  
 
 (provide 'packagesInit)
 ;;; packagesInit.el ends here
