@@ -91,7 +91,10 @@
 
 (save-place-mode 1)
 
-;;; Bookmarks
+;; Let's disable all arrow keys and offside keyboard keys
+(guru-global-mode 1)
+
+;;; BOOKMARKS
 
 (require 'bookmark)
 (setq bookmark-default-file
