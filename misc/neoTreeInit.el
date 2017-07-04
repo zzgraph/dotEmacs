@@ -4,6 +4,7 @@
 
 ;;; Code:
 (require 'neotree)
+(require 'all-the-icons)
 (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
 
 (provide 'neoTreeInit)
