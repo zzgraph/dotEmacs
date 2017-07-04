@@ -2,6 +2,7 @@
 \#*\#
 .\#*
 *.elc
+*.swp
 ac-comphist.dat
 auto-save-list/
 elpa/*
@@ -16,7 +17,7 @@ smex-items
 snippets/
 themes/
 thumbs/
-tuذtorial/
+tutorial/
 url/
 var/
 vendor/
