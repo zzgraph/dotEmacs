@@ -1,6 +1,6 @@
 ;;; editorInit.el --- Basic Configurations for emacs
 ;;; Commentary:
-;; 
+;;
 
 ;;; Code:
 
@@ -34,8 +34,10 @@
 
 ;; highlight trailng white space
 (require 'whitespace)
+(setq show-trailing-whitespace t)
 (setq whitespace-line-column 80) ; limit line length
 (setq whitespace-style '(face tabs empty trailing lines-tail))
+(add-hook 'prog-mode-hook 'whitespace-mode)
 
 ;; Treat Camelcase words as seprate words in prg-mode
 (add-hook 'prog-mode-hook 'subword-mode)
