@@ -20,11 +20,13 @@
 (eval-after-load "skewer-mode" '(diminish 'skewer-mode))
 (eval-after-load "skewer-css" '(diminish 'skewer-css-mode))
 (eval-after-load "which-key" '(diminish 'which-key-mode))
-(diminish 'rainbow-mode)
-(diminish 'emmet-mode)
+(eval-after-load "css-mode" '(diminish 'rainbow-mode))
+(eval-after-load "web-mode" '(diminish 'emmet-mode))
 (eval-after-load "git-gutter" '(diminish 'git-gutter-mode))
 (eval-after-load "subword" '(diminish 'subword-mode))
-(diminish 'js2-mode "JS2")
+(eval-after-load "whitespace" '(diminish 'whitespace-mode))
+(eval-after-load "tern" '(diminish 'tern-mode))
+(eval-after-load "js2-mode-pkg" '(diminish 'js2-mode "JS2"))
 (diminish 'auto-revert-mode)
 
 
