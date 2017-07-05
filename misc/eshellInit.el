@@ -20,5 +20,13 @@
               (eshell-cmpl-initialize)
               (define-key eshell-mode-map
 		[remap pcomplete] 'helm-esh-pcomplete)))
+
+;; TODO fix all the completion stuff in eshell \\
+;; TODO Completely disable company mode in eshell if necessary.\\
+;; FIXME Eshell does not know anything about environment variables
+;; that imported to emacs-shell, how to let eshell aware of SSH_AUTH
+;; Environment variabls
+
+
 (provide 'eshellInit)
 ;;; eshellInit.el ends here
