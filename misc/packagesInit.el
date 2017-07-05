@@ -126,6 +126,7 @@
 	json-mode
 	json-reformat
 	ng2-mode ;angular 2
+	js-comint
 	
 	;;Rust programming language
 	rust-mode
