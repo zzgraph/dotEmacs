@@ -45,7 +45,12 @@
 ** TODO Test notmuch search backend for GNUS
 ** TODO If Projectile project name=nil diminish projectile from mode-line
 
+* TODO Using `install` command in ./install.sh
+  install has ability to compare timestamps and only copy newer files.  It also can automatically creat backups.  Using Makefile whit install command may be a better approach to do the installation, more productive and seamless instalation.
 
+* TODO A new branch for use package.
+  the branch should be created to migrate-current working directory to completely integrated with use package.  that branch may log lives, until it can works like a charm
+ 
 * Some more ambitious tasks
 
 ** TODO MAYBE Rewrite all code base of org-babel and use-package macro
@@ -55,7 +60,9 @@
 * Known Issues
 
 
-
+  No convenient way has been found to solve shell-mode completion,
+  company-abrebev takes control of shell mode and it's behavior is very unwanted,
+  shell-pop only can change settings by invoked customize when settings strictly, no other way can be found to customize it somehow other way, also it pops shell (not term or eterm) first time in wrong window, annoyingly 
 * Done
 ** DONE Disability to use ssh public key to connect remotes and push to github is now resolved, Using `exec-path-from-shell' and copy copying this great code:
 
