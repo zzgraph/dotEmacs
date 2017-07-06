@@ -26,8 +26,8 @@
 	; helm-projectile
 	; helm-descbinds
 	; helm-flyspell
-	
-	;;; Ivy Group
+
+	;; Ivy Group
 	ivy
 	counsel
 	counsel-projectile
@@ -36,7 +36,7 @@
 	ivy-rich
 	flyspell-correct-ivy
 
-	;;;Projectile
+	;; Projectile
 	projectile
 
 	;; interface, windows and buffers
@@ -55,13 +55,11 @@
 	magit
 	git-gutter
 	gitignore-mode
-	
 
 	;; Major modes
 	yaml-mode
 	haskell-mode
 
-	
 	;; Clojure Major mode
 	; clojure-mode
 	; cider
@@ -78,6 +76,7 @@
 	company-web
 	company-shell
 	company-auctex
+	ac-html
 	ac-html-csswatcher
 	ac-html-bootstrap
 	company-restclient
@@ -105,7 +104,7 @@
 	python-django
 	jedi
 	virtualenvwrapper
-	
+
 	;;Web development
 	emmet-mode
 	simple-httpd
@@ -127,7 +126,8 @@
 	json-reformat
 	ng2-mode ;angular 2
 	js-comint
-	
+	tide ;TypeScript Interactive Development Environment for Emacs
+
 	;;Rust programming language
 	rust-mode
 	racer
@@ -135,7 +135,7 @@
 
 	;; Flycheck
 	flycheck
-	flycheck-color-mode-line ; colorify modeline according to the state of flycheck
+	flycheck-color-mode-line ; colorify modeline according to flycheck state
 	flycheck-status-emoji ; Shows Emojis in modeline for flycheck status
 	flycheck-rust ; Rust language support
 	flycheck-checkbashisms ; Bash scripts support
@@ -167,7 +167,7 @@
 
 (dolist (package zzgraph/packages)
   (unless (package-installed-p package)
-    (package-install package)))  
+    (package-install package)))
 
 (provide 'packagesInit)
 ;;; packagesInit.el ends here
