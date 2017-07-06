@@ -21,6 +21,11 @@
             (when (string-equal "tsx" (file-name-extension buffer-file-name))
               (setup-tide-mode))))
 
+
+(add-hook 'web-mode-hook (lambda ()
+			   (set (make-local-variable 'company-backends) '(company-web-html))
+			   (company-mode t)))
+
 (define-key web-mode-map (kbd "C-'") 'company-web-html)
 (setq web-mode-engines-alist  '(
 				("php"    . "\\.phtml\\'")
