@@ -10,7 +10,10 @@
 		 clojure-mode-hook
 		 python-mode-hook
 		 js-mode-hook
-	         shell-mode-hook))
+	         shell-mode-hook
+		 js2-mode-hook
+		 web-mode-hook
+		 css-mode-hook))
   (add-hook modes
 	    (lambda ()
 	      (flyspell-prog-mode))))
