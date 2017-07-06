@@ -121,5 +121,8 @@
 ;; Enable ibuffer instead of Buffer-list
 (global-set-key (kbd "C-x C-b") 'ibuffer-other-window)
 
+;; Force complete file names on "C-c /" key
+(global-set-key (kbd "C-c /") 'company-files)
+
 (provide 'keyBindings)
 ;;; keyBindings.el ends here
