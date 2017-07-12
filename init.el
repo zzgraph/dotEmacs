@@ -78,6 +78,7 @@
 (require 'editorInit)
 (require 'neoTreeInit)
 (require 'markDownInit)
+(require 'torrentsInit)
 (require 'keyBindings)
 
 (provide 'init)
