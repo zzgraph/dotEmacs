@@ -10,9 +10,9 @@
 (display-time-mode 1)
 ;; Display size of current buffer
 (size-indication-mode t)
-;; (display-battery-mode t)
+(display-battery-mode t)
 (column-number-mode t)
-(add-hook 'after-init-hook #'fancy-battery-mode)
+;; (add-hook 'after-init-hook #'fancy-battery-mode)
 
 
 ;; (spaceline-all-the-icons-theme)
