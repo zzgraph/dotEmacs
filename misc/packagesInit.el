@@ -140,6 +140,9 @@
 	flycheck-rust ; Rust language support
 	flycheck-checkbashisms ; Bash scripts support
 
+	;; Torrents
+	mentor
+
 	;; Misc
 	ag
 	xterm-color
