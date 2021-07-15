@@ -10,11 +10,17 @@
 	     '("melpa" . "https://melpa.org/packages/")
 	     t)
 (add-to-list 'package-archives
-	     '("marmalade" . "http://marmalade-repo.org/packages/")
+	     '("nongnu" . "https://elpa.nongnu.org/nongnu/")
 	     t)
 (add-to-list 'package-archives
-	     '("org" . "http://orgmode.org/elpa/")
+	     '("melpa-stable" . "https://stable.melpa.org/packages/")
 	     t)
+(setq package-archive-priorities
+      '((gnu           .  4)
+	(nongnu        .  3)
+	(melpa-stable  .  2)
+	(melpa         .  1)
+	))
 
 (package-initialize)
 
@@ -22,10 +28,10 @@
 
 (setq zzgraph/packages
       '(;; Helm (Replaced with ivy for now)
-	; helm
-	; helm-projectile
-	; helm-descbinds
-	; helm-flyspell
+					; helm
+					; helm-projectile
+					; helm-descbinds
+					; helm-flyspell
 
 	;; Ivy Group
 	ivy
@@ -40,15 +46,15 @@
 	projectile
 
 	;; interface, windows and buffers
-	; spaceline
-	; spaceline-all-the-icons-theme
+					; spaceline
+					; spaceline-all-the-icons-theme
 	gruvbox-theme
 	smart-mode-line
 	ace-jump-mode
 	ace-window
 	hlinum
 	all-the-icons
-	; all-the-icons-dired
+					; all-the-icons-dired
 
 
 	;; Version control
@@ -61,12 +67,12 @@
 	haskell-mode
 
 	;; Clojure Major mode
-	; clojure-mode
-	; cider
-	; clojure-mode-extra-font-locking
+					; clojure-mode
+					; cider
+					; clojure-mode-extra-font-locking
 
 	;; ac auto complete (replaced with company)
-	; auto-complete
+					; auto-complete
 
 	;; Company and completion backends
 	company
@@ -81,19 +87,22 @@
 	ac-html-bootstrap
 	company-restclient
 	bash-completion
-	company-tern
+	;; company-tern		       
 	pcomplete-extension
 	readline-complete
 
 	;; Markdown
 	markdown-mode
-	markdown-edit-indirect
+	;; markdown-edit-indirect
 
 	;; org-mode
 	org
-	org-plus-contrib
+	org-contrib
 	ox-pandoc
 	org2jekyll
+	org-translate
+	org2blog
+	org-bullets
 
 	;; eshell
 	eshell-prompt-extras
@@ -139,6 +148,7 @@
 	flycheck-status-emoji ; Shows Emojis in modeline for flycheck status
 	flycheck-rust ; Rust language support
 	flycheck-checkbashisms ; Bash scripts support
+	flycheck-yamllint
 
 	;; Torrents
 	mentor
@@ -163,7 +173,10 @@
 	shell-pop
 	exec-path-from-shell
 	which-key
-	system-packages))
+	system-packages
+	editorconfig
+	guru-mode
+	neotree))
 
 (unless package-archive-contents
   (package-refresh-contents))
