@@ -9,7 +9,7 @@
 (setq ivy-wrap t)
 
 (require 'ivy-rich)
-(ivy-set-display-transformer 'ivy-switch-buffer 'ivy-rich-switch-buffer-transformer)
-
+(ivy-rich-mode 1)
+(setcdr (assq t ivy-format-functions-alist) #'ivy-format-function-line)
 (provide 'ivyInit)
 ;;; ivyInit.el ends here
