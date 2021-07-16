@@ -3,7 +3,7 @@
 ;;; Code:
 
 
-(require secrets)
+(require 'secrets)
 
 (defvar misc-settings-folder)
 (setq misc-settings-folder
