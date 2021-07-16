@@ -21,7 +21,7 @@
      ;; (add-to-list 'company-backends 'company-shell)
 
      ;; Adding tern to company backends for javascript files
-     (add-to-list 'company-backends 'company-tern)
+     ;; (add-to-list 'company-backends 'company-tern)
 
      (company-quickhelp-mode 1)
 
