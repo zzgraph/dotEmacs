@@ -81,7 +81,12 @@
 ;; (global-set-key (kbd "C-;") 'helm-flyspell-correct)
 ;; (define-key flyspell-mode-map (kbd "C-;") 'helm-flyspell-correct)
 (require 'flyspell-correct-ivy)
-(define-key flyspell-mode-map (kbd "C-;") 'flyspell-correct-previous-word-generic)
+(define-key flyspell-mode-map (kbd "C-;")
+  'flyspell-correct-previous-word-generic)
+
+;; Projectile
+(define-key projectile-mode-map (kbd "C-c p")
+  'projectile-command-map)
 
 ;; Search and replace
 (global-set-key (kbd "C-s") 'isearch-forward)
