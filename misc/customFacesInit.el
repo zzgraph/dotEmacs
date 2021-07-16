@@ -2,7 +2,7 @@
 ;;;
 ;;; Commentary:
 ;;; Code:
-(add-to-list 'default-frame-alist '(font . "Vazir Code-12"))
+(add-to-list 'default-frame-alist '(font . "Vazir Code-13"))
 (defun zzgraph/fix-fontset (&optional frame)
   "Adding Symbola font to fontset of the FRAME.\\
 being creted to show emoji utf-8 symbols."
