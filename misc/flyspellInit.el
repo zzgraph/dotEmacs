@@ -4,7 +4,6 @@
 ;; (require 'auto-dictionary)
 (require 'flyspell)
 (require 'ispell)
-(require 'ivy)
 (dolist (hook '(text-mode-hook))
   (add-hook hook (lambda () (flyspell-mode 1))))
 (dolist (modes '(emacs-lisp-mode-hook
