@@ -9,6 +9,9 @@
 
 (require 'org-bullets)
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+(with-eval-after-load 'ox
+  (require 'ox-hugo))
+
 
 (setq org-reveal-root "file:///home/shibi/Downloads/source/reveal.js")
 

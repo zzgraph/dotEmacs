@@ -87,7 +87,7 @@
 	ac-html-bootstrap
 	company-restclient
 	bash-completion
-	;; company-tern		       
+	;; company-tern
 	pcomplete-extension
 	readline-complete
 
@@ -103,6 +103,7 @@
 	org-translate
 	org2blog
 	org-bullets
+	ox-hugo
 
 	;; eshell
 	eshell-prompt-extras
