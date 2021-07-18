@@ -27,13 +27,7 @@
 (defvar zzgraph/packages)
 
 (setq zzgraph/packages
-      '(;; Helm (Replaced with ivy for now)
-					; helm
-					; helm-projectile
-					; helm-descbinds
-					; helm-flyspell
-
-	;; Ivy Group
+      '(;; Ivy Group
 	ivy
 	counsel
 	counsel-projectile
@@ -46,20 +40,16 @@
 	projectile
 
 	;; interface, windows and buffers
-					; spaceline
-					; spaceline-all-the-icons-theme
 	gruvbox-theme
 	smart-mode-line
 	ace-jump-mode
 	ace-window
 	hlinum
 	all-the-icons
-					; all-the-icons-dired
-
+	all-the-icons-dired
 
 	;; Version control
 	magit
-	git-gutter
 	gitignore-mode
 
 	;; Major modes
@@ -177,7 +167,8 @@
 	system-packages
 	editorconfig
 	guru-mode
-	neotree))
+	neotree
+	wc-mode))
 
 (unless package-archive-contents
   (package-refresh-contents))
