@@ -16,6 +16,11 @@
 (when (fboundp 'tooltip-mode)
     (tooltip-mode -1))
 
+;; Use all-the-icons
+
+(require 'all-the-icons)
+
+
 ;; how to dosplay cursor
 (setq-default cursor-type '(bar . 2)
 	      cursor-in-non-selected-windows 'hollow
@@ -38,9 +43,7 @@
 (add-to-list 'initial-frame-alist '(fullscreen . maximized))
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
-;;; (set-frame-parameter nil 'fullscreen 'fullboth)
-;;; (add-to-list 'default-frame-alist
-;;; 	     'fullscreen 'fullboth)
+
 (set-frame-parameter (selected-frame)
 		     'alpha '(95 80)
 		     )
