@@ -108,7 +108,6 @@
 (global-set-key (kbd "C-c j") 'counsel-git-grep)
 (global-set-key (kbd "C-c k") 'counsel-ag)
 (global-set-key (kbd "C-x l") 'counsel-locate)
-(global-set-key (kbd "C-S-o") 'counsel-rhythmbox)
 (define-key read-expression-map (kbd "C-r") 'counsel-expression-history)
 
 
@@ -122,6 +121,16 @@
 ;; python-django-mode key-binding
 ;; (global-set-key (kbd "C-x j") 'python-django-open-project)
 
+
+;; Keybinding for Elfeed
+(global-set-key (kbd "C-x w") 'bjm/elfeed-load-db-and-open)
+(define-key elfeed-show-mode-map (kbd "j") 'elfeed-goodies/split-show-next)
+(define-key elfeed-show-mode-map (kbd "k") 'elfeed-goodies/split-show-prev)
+(define-key elfeed-search-mode-map (kbd "j") 'next-line)
+(define-key elfeed-search-mode-map (kbd "k") 'previous-line)
+(define-key elfeed-show-mode-map (kbd "S-SPC") 'scroll-down-command)
+(define-key elfeed-search-mode-map (kbd "q") 'bjm/elfeed-save-db-and-bury)
+(define-key elfeed-show-mode-map (kbd "B") 'bjm/elfeed-show-visit-gui)
 
 ;; Enable ibuffer instead of Buffer-list
 (global-set-key (kbd "C-x C-b") 'ibuffer-other-window)

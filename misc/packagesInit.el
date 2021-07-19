@@ -144,6 +144,12 @@
 	;; Torrents
 	mentor
 
+	;; Elfeed for rss reading
+	elfeed
+	elfeed-org
+	elfeed-goodies
+	
+
 	;; Misc
 	ag
 	xterm-color
