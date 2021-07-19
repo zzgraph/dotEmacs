@@ -20,6 +20,8 @@
 
 (add-to-list 'load-path misc-settings-folder)
 
+(setq browse-url-browser-function 'eww-browse-url)
+
 (require 'personal)
 (require 'packagesInit)
 (require 'customFacesInit)
@@ -71,6 +73,7 @@
 (require 'neoTreeInit)
 (require 'markDownInit)
 (require 'torrentsInit)
+(require 'elfeedInit)
 (require 'keyBindings)
 
 (provide 'init)
