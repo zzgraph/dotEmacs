@@ -6,6 +6,7 @@
 ;; Isn't it silly to first start a global mode and then inhibit it in
 ;; almost "every other" modes? I think it's silly! let see how is this
 ;; going to work, and let's use nlinum instead of linum
+(require 'linum)
 (add-hook 'prog-mode-hook 'linum-mode)
 
 (setq linum-format "%3d")
