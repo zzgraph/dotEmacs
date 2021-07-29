@@ -6,7 +6,8 @@
 (defun zzgraph/fix-fontset (&optional frame)
   "Adding Symbola font to fontset of the FRAME.\\
 being creted to show emoji utf-8 symbols."
-  (set-fontset-font "fontset-default" '(#x10000 . #x1ffff) "Symbola-13")
+  (if (display-graphic-p)
+      (set-fontset-font "fontset-default" '(#x10000 . #x1ffff) "Symbola-13"))
 ;;  (set-fontset-font "fontset-default" 'arabic "DejaVu Sans")
   )
 (zzgraph/fix-fontset)

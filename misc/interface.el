@@ -8,13 +8,17 @@
 
 
 ;; Remove menubar, toolbar and scrollbar and tooltips
+(if (display-graphic-p)
+    (progn
+      (when (fboundp 'tool-bar-mode)
+	(tool-bar-mode -1))
+      (when (fboundp 'scroll-bar-mode)
+	(scroll-bar-mode -1))
+      (when (fboundp 'tooltip-mode)
+	(tooltip-mode -1))))
+
 (when (fboundp 'menu-bar-mode)
-    (menu-bar-mode -1))
-(when (fboundp 'tool-bar-mode)
-    (tool-bar-mode -1))
-(set-scroll-bar-mode nil)
-(when (fboundp 'tooltip-mode)
-    (tooltip-mode -1))
+  (menu-bar-mode -1))
 
 ;; Use all-the-icons
 
