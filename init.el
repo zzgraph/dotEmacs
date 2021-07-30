@@ -68,7 +68,7 @@
 (require 'editorConfigInit)
 (require 'shellPopInit)
 (require 'shellInit)
-(require 'gitGutterInit)
+;(require 'gitGutterInit)
 (require 'editorInit)
 (require 'neoTreeInit)
 (require 'markDownInit)
