@@ -174,7 +174,8 @@
 	editorconfig
 	guru-mode
 	neotree
-	wc-mode))
+	wc-mode
+	keychain-environment))
 
 (unless package-archive-contents
   (package-refresh-contents))

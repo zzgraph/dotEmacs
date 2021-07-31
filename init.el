@@ -4,6 +4,7 @@
 
 
 (require 'secrets)
+(require 'keychain-environment)
 
 (defvar misc-settings-folder)
 (setq misc-settings-folder
