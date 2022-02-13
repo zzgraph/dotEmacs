@@ -5,7 +5,6 @@
 
 (require 'secrets)
 
-
 (defvar misc-settings-folder)
 (setq misc-settings-folder
       (expand-file-name "misc" user-emacs-directory))
@@ -77,6 +76,7 @@
 (require 'elfeedInit)
 (require 'keyBindings)
 (require 'keychain-environment)
+
 (provide 'init)
 ;;; init.el ends Here
 (put 'upcase-region 'disabled nil)
