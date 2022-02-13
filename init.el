@@ -4,7 +4,7 @@
 
 
 (require 'secrets)
-(require 'keychain-environment)
+
 
 (defvar misc-settings-folder)
 (setq misc-settings-folder
@@ -76,7 +76,7 @@
 (require 'torrentsInit)
 (require 'elfeedInit)
 (require 'keyBindings)
-
+(require 'keychain-environment)
 (provide 'init)
 ;;; init.el ends Here
 (put 'upcase-region 'disabled nil)
