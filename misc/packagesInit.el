@@ -50,7 +50,7 @@
 
 	;; Version control
 	magit
-	gitignore-mode
+	;gitignore-mode
 
 	;; Major modes
 	yaml-mode

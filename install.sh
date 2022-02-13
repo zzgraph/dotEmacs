@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-EMACS_CONFIGURATION_FOLDER=$HOME/.emacs.d
-SYSTEMD_USER_DIR=$HOME/.config/systemd/user
-USER_DESKTOP_ENTRY_DIR=$HOME/.local/share/applications
+EMACS_CONFIGURATION_FOLDER=$HOME/.config/emacs
+SYSTEMD_USER_DIR=$XDG_CONFIG_HOME/systemd/user
+USER_DESKTOP_ENTRY_DIR=$XDG_DATA_HOME/applications
 
 if [ ! -d $SYSTEMD_USER_DIR ]; then
     mkdir -p $SYSTEMD_USER_DIR;
