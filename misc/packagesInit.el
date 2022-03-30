@@ -41,6 +41,7 @@
 
 	;; interface, windows and buffers
 	gruvbox-theme
+	nord-themef
 	smart-mode-line
 	ace-jump-mode
 	ace-window

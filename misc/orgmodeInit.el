@@ -13,7 +13,5 @@
   (require 'ox-hugo))
 
 
-(setq org-reveal-root "file:///home/shibi/Downloads/source/reveal.js")
-
 (provide 'orgmodeInit)
 ;;; orgmodeInit.el ends here
