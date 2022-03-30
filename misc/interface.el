@@ -47,15 +47,16 @@
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 
-(set-frame-parameter (selected-frame)
-		     'alpha '(95 80)
-		     )
-(add-to-list 'default-frame-alist
-	     '(alpha 95 80)
-	     )
+;; (set-frame-parameter (selected-frame)
+;; 		     'alpha '(95 80)
+;; 		     )
+;; (add-to-list 'default-frame-alist
+;; 	     '(alpha 95 80)
+;; 	     )
+
 
 (defvar zzgraph/theme)
-(setq zzgraph/theme 'gruvbox)
+(setq zzgraph/theme 'nord)
 (load-theme zzgraph/theme t)
 
 
